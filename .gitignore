@@ -5,8 +5,9 @@
 .Trashes
 .fseventsd
 
-# Build output
+# Build and release output
 predatorsense/build/
+dist/
 audio/out/
 audio/work/
 audio/build.log
