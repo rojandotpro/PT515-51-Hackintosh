@@ -162,6 +162,9 @@ final class PSECModel: ObservableObject {
     nonisolated static let minimumVisibleKeyboardBrightness = 25
 
     /// NSColorPanel needs an ObjC target/action, hence a small NSObject shim.
+    /// AppKit sends the action on the main thread, so the target is main-actor
+    /// isolated too and can read `sender.color` without a concurrency warning.
+    @MainActor
     final class ColourTarget: NSObject {
         var onPick: ((NSColor) -> Void)?
         @objc func picked(_ sender: NSColorPanel) { onPick?(sender.color) }

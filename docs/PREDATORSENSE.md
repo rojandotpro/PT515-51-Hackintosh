@@ -4,6 +4,10 @@ Acer's PredatorSense is Windows-only. It controls fans, CPU power profiles, the 
 the keyboard RGB and the keyboard backlight over an undocumented ACPI-WMI interface. This project
 replaces it with three components and **no third-party dependencies**.
 
+> **Want to build your own?** [`BUILD-YOUR-OWN-APP.md`](BUILD-YOUR-OWN-APP.md) is the full tutorial:
+> finding the control path, reversing the ACPI-WMI interface, probing safely, writing the kext,
+> daemon and app, and porting the method to another laptop.
+
 ```
 PredatorSense.app        SwiftUI menu-bar app (runs as you, LSUIElement)
       │  UNIX socket /var/run/predatorsense.sock

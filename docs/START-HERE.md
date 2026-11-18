@@ -15,6 +15,7 @@ made it all work.
 |---|---|---|
 | **Understand what a Hackintosh is** | [Hackintosh 101](HACKINTOSH-101.md) | 20 min |
 | **Build this on the same laptop** | [Getting started](GETTING-STARTED.md) | 1–2 h |
+| **Build my own hardware-control app** | [Build your own PredatorSense](BUILD-YOUR-OWN-APP.md) | 1–2 h |
 | **Keep an existing build stable** | [Stability](STABILITY.md) | 20 min |
 | **Fix one specific thing** | [Troubleshooting](TROUBLESHOOTING.md) | 5 min |
 | **Understand this machine deeply** | [Build reference](BUILD-REFERENCE.md) | reference |
@@ -28,6 +29,7 @@ flowchart LR
     C --> D["Build reference<br/>the evidence"]
     B -.-> E["Troubleshooting"]
     C -.-> E
+    B -.-> F["Build your own app<br/>the custom part"]
 ```
 
 ---

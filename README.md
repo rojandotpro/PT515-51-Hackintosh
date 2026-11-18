@@ -1,16 +1,17 @@
-# Acer Predator Triton 500 (PT515-51) — macOS Tahoe Hackintosh
+# Acer Predator Triton 500 (PT515-51) — macOS Tahoe Hackintosh + Custom PredatorSense App
 
 ![macOS](https://img.shields.io/badge/macOS-26.7.2%20Tahoe-000000?logo=apple&logoColor=white)
 ![OpenCore](https://img.shields.io/badge/OpenCore-1.0.8-4B8BBE)
 ![status](https://img.shields.io/badge/status-working%20daily%20driver-brightgreen)
 ![licence](https://img.shields.io/badge/licence-MIT-blue)
 
-A complete, working macOS Tahoe build for the **Acer Predator Triton 500 PT515-51**, including a
-custom driver stack for the laptop's EC/WMI hardware that Acer never documented.
+A complete, working macOS Tahoe build for the **Acer Predator Triton 500 PT515-51**, plus a
+**custom PredatorSense replacement** — kernel driver, root daemon and menu-bar app — for the
+laptop's EC/WMI hardware that Acer never documented.
 
-This repository is the full record: the EFI, every kext and patch, the PredatorSense replacement
-(kext + root daemon + menu-bar app), the custom AppleALC audio work, the display/EDID work, the
-Linux cross-checks, the dead ends, and the method used to get here with AI assistants.
+This repository is the full record: the EFI, every kext and patch, the custom app and the tutorial
+for building your own, the custom AppleALC audio work, the display/EDID work, the Linux
+cross-checks, the dead ends, and the method used to get here with AI assistants.
 
 > **Status: working daily driver.** macOS Tahoe **26.7.2 (25G332)**, OpenCore 1.0.8, UHD 630
 > acceleration, custom audio, Wi-Fi, battery, sleep, 144 Hz display, keyboard backlight,
@@ -34,6 +35,7 @@ in one click.
 |---|---|
 | understand how a Hackintosh works at all | [Hackintosh 101](docs/HACKINTOSH-101.md) |
 | build this on the same laptop | [Getting started](docs/GETTING-STARTED.md) |
+| **build my own hardware-control app** | [Build your own PredatorSense](docs/BUILD-YOUR-OWN-APP.md) |
 | keep an existing build stable | [Stability](docs/STABILITY.md) |
 | fix one specific thing | [Troubleshooting](docs/TROUBLESHOOTING.md) |
 | know exactly what is installed | [Known-good manifest](reference/KNOWN-GOOD.md) |
@@ -98,6 +100,42 @@ limit peak-power bursts; replace it if you need sustained performance on battery
 
 ---
 
+## Custom PredatorSense app
+
+Acer ships PredatorSense for Windows only. This repository replaces it with three pieces of
+original software, and documents the whole reverse-engineering method so the same approach works on
+another laptop or a completely different device.
+
+| Part | What it is |
+|---|---|
+| [`psec2/kext/`](psec2/kext/) | `PredatorSenseEC.kext` — IOKit driver for the Acer ACPI-WMI mapper, EC and MSRs |
+| [`psec2/daemon/`](psec2/daemon/) | Root daemon — owns the hardware, persists state, watchdog, thermal ceiling |
+| [`psec2/app/`](psec2/app/) | SwiftUI menu-bar app — fans, power profiles, RGB, keyboard backlight |
+
+**The tutorial is [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md).** It covers finding
+the control path, decoding the ACPI-WMI interface, probing safely, writing the driver, designing a
+UI that cannot brick the machine, and porting the method to Dell, Lenovo, HP, MSI, ASUS or a USB/HID
+device. The reference implementation's command protocol is in
+[`docs/PREDATORSENSE.md`](docs/PREDATORSENSE.md).
+
+---
+
+## Releases
+
+Prebuilt packages are attached to [Releases](https://github.com/rojandotpro/PT515-51-Hackintosh/releases).
+They are built from the source in this repository and checked against the live machine.
+
+| Asset | Contents |
+|---|---|
+| `PredatorSense-1.0.0.zip` | The app, daemon, kext, LaunchDaemon plist and install notes |
+| `PT515-51-EFI-1.0.0.zip` | The complete sanitized OpenCore EFI |
+| `SHA256SUMS.txt` | Checksums for both archives |
+
+> The EFI archive contains **placeholder** SMBIOS values. Generate your own before signing in to
+> iCloud — see [Quick start](#quick-start) step 4.
+
+---
+
 ## Quick start
 
 You need a working macOS install to prepare the USB. Read
@@ -155,10 +193,12 @@ reference/               Handovers, optimisation review, known-good manifest
 | [`docs/START-HERE.md`](docs/START-HERE.md) | Choose your path, 60-second summary |
 | [`docs/HACKINTOSH-101.md`](docs/HACKINTOSH-101.md) | The mental model: boot chain, kexts, ACPI, SMBIOS, SIP, glossary |
 | [`docs/GETTING-STARTED.md`](docs/GETTING-STARTED.md) | Build it from zero, step by step |
+| [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md) | **Custom PredatorSense tutorial** — build a hardware-control app for any laptop |
 | [`docs/STABILITY.md`](docs/STABILITY.md) | Backups, update playbook, monitoring, recovery |
 | [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) | Symptom → cause → fix |
 | [`docs/BUILD-REFERENCE.md`](docs/BUILD-REFERENCE.md) | Every measurement, reverse-engineered interface and rejected approach |
 | [`docs/AI-WORKFLOW.md`](docs/AI-WORKFLOW.md) | The method, prompt patterns and guardrails used to build this |
+| [`docs/AI-ATTRIBUTION.md`](docs/AI-ATTRIBUTION.md) | Which assistants were used, what the human did, licensing and trademark position |
 | [`docs/PREDATORSENSE.md`](docs/PREDATORSENSE.md) | The custom driver stack and its command protocol |
 | [`docs/AUDIO.md`](docs/AUDIO.md) | ALC289 layout 23, DSP chain, mute fix, rebuild |
 | [`docs/DISPLAY.md`](docs/DISPLAY.md) | EDID override, refresh rates, banding, colour |
