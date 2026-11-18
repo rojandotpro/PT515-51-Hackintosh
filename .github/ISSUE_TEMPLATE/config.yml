@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the build reference first
+    url: https://github.com/USER/PT515-51-Hackintosh/blob/main/docs/BUILD-REFERENCE.md
+    about: Reverse-engineered details, measurements and the list of rejected approaches.

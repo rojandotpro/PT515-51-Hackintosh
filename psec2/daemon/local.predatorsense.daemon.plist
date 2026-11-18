@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>local.predatorsense.daemon</string>
+
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/libexec/predatorsensed</string>
+	</array>
+
+	<key>RunAtLoad</key>
+	<true/>
+
+	<!-- Restart if it dies. Note that a crash closes the IOKit user client,
+	     which makes the kext hand the fans straight back to the EC — so a
+	     crash-loop is noisy but never dangerous. -->
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+
+	<key>ThrottleInterval</key>
+	<integer>5</integer>
+
+	<key>StandardOutPath</key>
+	<string>/var/log/predatorsensed.log</string>
+	<key>StandardErrorPath</key>
+	<string>/var/log/predatorsensed.log</string>
+
+	<key>ProcessType</key>
+	<string>Standard</string>
+</dict>
+</plist>

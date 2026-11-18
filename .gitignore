@@ -1,0 +1,19 @@
+# macOS metadata — never belongs in a git repo
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Build output
+psec2/build/
+audio/out/
+audio/work/
+audio/build.log
+*.o
+*.dSYM/
+
+# Local test artefacts
+*.bak
+*.plist.bak
+EOF*

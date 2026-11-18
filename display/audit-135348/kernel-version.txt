@@ -1,0 +1,1 @@
+Linux CachyOS 7.1.6-1-cachyos #1 SMP PREEMPT_DYNAMIC Sun, 09 Aug 2026 14:26:58 +0000 x86_64 GNU/Linux

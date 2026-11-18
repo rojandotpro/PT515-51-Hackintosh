@@ -1,0 +1,23 @@
+● bluetooth.service - Bluetooth service
+     Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; enabled; preset: disabled)
+     Active: active (running) since Tue 2026-10-06 13:42:33 UTC; 11min ago
+ Invocation: 2781005e97a544adb82d9b74f7278159
+       Docs: man:bluetoothd(8)
+   Main PID: 876 (bluetoothd)
+     Status: "Running"
+      Tasks: 1 (limit: 18895)
+     Memory: 2.8M (peak: 4.5M)
+        CPU: 448ms
+     CGroup: /system.slice/bluetooth.service
+             └─876 /usr/lib/bluetooth/bluetoothd
+
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_1
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_0
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/faststream
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/faststream_duplex
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/opus_05
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/opus_05
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/opus_05_duplex
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/opus_05_duplex

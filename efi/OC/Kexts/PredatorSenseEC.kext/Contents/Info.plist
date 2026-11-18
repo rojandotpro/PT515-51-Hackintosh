@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key><string>en</string>
+	<key>CFBundleExecutable</key><string>PredatorSenseEC</string>
+	<key>CFBundleIdentifier</key><string>local.predatorsense.PredatorSenseEC</string>
+	<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+	<key>CFBundleName</key><string>PredatorSenseEC</string>
+	<key>CFBundlePackageType</key><string>KEXT</string>
+	<key>CFBundleShortVersionString</key><string>3.7.0</string>
+	<key>CFBundleVersion</key><string>3.7.0</string>
+	<key>CFBundleSignature</key><string>????</string>
+	<key>OSBundleRequired</key><string>Root</string>
+
+	<!-- Matches IOResources, not an ACPI device: keeps the kext out of
+	     boot-time ACPI matching entirely. The EC is found at runtime. -->
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>PredatorSenseEC</key>
+		<dict>
+			<key>CFBundleIdentifier</key><string>local.predatorsense.PredatorSenseEC</string>
+			<key>IOClass</key><string>PredatorSenseEC</string>
+			<key>IOProviderClass</key><string>IOResources</string>
+			<key>IOMatchCategory</key><string>PredatorSenseEC</string>
+			<key>IOResourceMatch</key><string>IOKit</string>
+			<key>IOUserClientClass</key><string>PSECUserClient</string>
+		</dict>
+	</dict>
+
+	<!-- IOACPIFamily (the family), NOT com.apple.driver.AppleACPIPlatform.
+	     Declaring the driver created a boot-time load-order dependency on the
+	     very thing that enumerates ACPI devices, and hung the machine at ACPI
+	     bring-up. Mirrors SMCProcessor.kext, known good on this hardware. -->
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key><string>1.0.0d1</string>
+		<key>com.apple.kpi.bsd</key><string>11.0.0</string>
+		<key>com.apple.kpi.dsep</key><string>11.0.0</string>
+		<key>com.apple.kpi.iokit</key><string>11.0.0</string>
+		<key>com.apple.kpi.libkern</key><string>11.0.0</string>
+		<key>com.apple.kpi.mach</key><string>11.0.0</string>
+		<key>com.apple.kpi.unsupported</key><string>11.0.0</string>
+	</dict>
+</dict>
+</plist>

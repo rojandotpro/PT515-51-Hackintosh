@@ -1,0 +1,3 @@
+2: hci0: Bluetooth
+	Soft blocked: no
+	Hard blocked: no

@@ -1,0 +1,40 @@
+PT515-51 AUDIO FIX — STEPS (offline, no Wi-Fi needed)
+=====================================================
+
+GOALS
+ 1. Speakers: recreate Windows Waves "Music" sound on macOS
+ 2. Mic: stop Wispr Flow cutting off the start of speech
+ 3. Mute key: make it work for laptop speakers + headphone jack
+ 4. Occasional total audio failure: catch it in logs
+
+------------------------------------------------------
+STEP 1 — LINUX (CachyOS USB)
+------------------------------------------------------
+1. Boot the CachyOS USB normally (no iomem=relaxed needed).
+2. Open the file manager, click "Multimedia" so it mounts.
+3. Open Konsole and run this ONE line:
+
+   bash /run/media/$USER/Multimedia/Hackintosh/Final/audio-linux-dump.sh
+
+4. It saves the audio dump automatically, then starts the mute-key test:
+   -> press Fn + Mute 3-4 times, then wait (it stops by itself after 30 s).
+5. When it says "done", reboot to macOS.
+
+Files it creates (in Hackintosh/Final):
+   audio-dump-linux.txt
+   mute-key-linux.txt
+
+If "Multimedia drive not mounted": click the drive in the file manager, run again.
+If you get "Input/output error": run  cd ~  first, then run again.
+
+------------------------------------------------------
+STEP 2 — macOS, ONLY WHEN SOUND BREAKS
+------------------------------------------------------
+Before rebooting or fixing it, run in Terminal:
+
+   log show --last 5m --predicate 'process == "coreaudiod" OR sender CONTAINS "AppleHDA" OR sender CONTAINS "AppleALC"' > ~/Downloads/audio-fail.log
+
+------------------------------------------------------
+STEP 3 — tell Claude "audio dump done"
+------------------------------------------------------
+Claude reads the files directly and builds the custom layout.

@@ -1,0 +1,80 @@
+[    0.000000] Command line: BOOT_IMAGE=/arch/boot/x86_64/vmlinuz-linux-cachyos archisobasedir=arch archisosearchuuid=2026-08-09-15-47-03-00 cow_spacesize=10G copytoram=auto module_blacklist=pcspkr i915.modeset=1 amdgpu.modeset=1 nvme_load=yes
+[    0.049504] Kernel command line: BOOT_IMAGE=/arch/boot/x86_64/vmlinuz-linux-cachyos archisobasedir=arch archisosearchuuid=2026-08-09-15-47-03-00 cow_spacesize=10G copytoram=auto module_blacklist=pcspkr i915.modeset=1 amdgpu.modeset=1 nvme_load=yes
+[    0.143246] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.143978] audit: initializing netlink subsys (disabled)
+[    0.645878] ACPI: bus type drm_connector registered
+[    0.658245] simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+[    0.658264] [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+[    0.662328] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[  137.968981] systemd[1]: Created symlink '/etc/systemd/system/multi-user.target.wants/machines.target' → '/usr/lib/systemd/system/machines.target'.
+[  137.968985] systemd[1]: Created symlink '/etc/systemd/system/ctrl-alt-del.target' → '/usr/lib/systemd/system/reboot.target'.
+[  137.968987] systemd[1]: Created symlink '/etc/systemd/system/multi-user.target.wants/remote-cryptsetup.target' → '/usr/lib/systemd/system/remote-cryptsetup.target'.
+[  137.968989] systemd[1]: Created symlink '/etc/systemd/system/multi-user.target.wants/remote-integritysetup.target' → '/usr/lib/systemd/system/remote-integritysetup.target'.
+[  137.968990] systemd[1]: Created symlink '/etc/systemd/system/multi-user.target.wants/remote-veritysetup.target' → '/usr/lib/systemd/system/remote-veritysetup.target'.
+[  137.968992] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-boot-clear-sysfail.service' → '/usr/lib/systemd/system/systemd-boot-clear-sysfail.service'.
+[  137.968994] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-boot-update.service' → '/usr/lib/systemd/system/systemd-boot-update.service'.
+[  137.968996] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-confext.service' → '/usr/lib/systemd/system/systemd-confext.service'.
+[  137.968998] systemd[1]: Created symlink '/etc/systemd/system/systemd-homed.service.wants/systemd-homed-activate.service' → '/usr/lib/systemd/system/systemd-homed-activate.service'.
+[  137.968999] systemd[1]: Created symlink '/etc/systemd/system/dbus-org.freedesktop.home1.service' → '/usr/lib/systemd/system/systemd-homed.service'.
+[  137.969001] systemd[1]: Created symlink '/etc/systemd/system/multi-user.target.wants/systemd-homed.service' → '/usr/lib/systemd/system/systemd-homed.service'.
+[  137.969003] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-journald-audit.socket' → '/usr/lib/systemd/system/systemd-journald-audit.socket'.
+[  137.969005] systemd[1]: Created symlink '/etc/systemd/system/systemd-journald.service.wants/systemd-journald-audit.socket' → '/usr/lib/systemd/system/systemd-journald-audit.socket'.
+[  137.969007] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-mountfsd.socket' → '/usr/lib/systemd/system/systemd-mountfsd.socket'.
+[  137.969008] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-network-generator.service' → '/usr/lib/systemd/system/systemd-network-generator.service'.
+[  137.969010] systemd[1]: Created symlink '/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service' → '/usr/lib/systemd/system/systemd-networkd-wait-online.service'.
+[  137.969012] systemd[1]: Created symlink '/etc/systemd/system/dbus-org.freedesktop.network1.service' → '/usr/lib/systemd/system/systemd-networkd.service'.
+[  137.969014] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-networkd-varlink.socket' → '/usr/lib/systemd/system/systemd-networkd-varlink.socket'.
+[  137.969016] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-networkd-varlink-metrics.socket' → '/usr/lib/systemd/system/systemd-networkd-varlink-metrics.socket'.
+[  137.969017] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-networkd-resolve-hook.socket' → '/usr/lib/systemd/system/systemd-networkd-resolve-hook.socket'.
+[  137.969019] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-nsresourced.socket' → '/usr/lib/systemd/system/systemd-nsresourced.socket'.
+[  137.969021] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-pstore.service' → '/usr/lib/systemd/system/systemd-pstore.service'.
+[  137.969023] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-report-basic.socket' → '/usr/lib/systemd/system/systemd-report-basic.socket'.
+[  137.969025] systemd[1]: Created symlink '/etc/systemd/system/sockets.target.wants/systemd-report-cgroup.socket' → '/usr/lib/systemd/system/systemd-report-cgroup.socket'.
+[  137.969027] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-sysext.service' → '/usr/lib/systemd/system/systemd-sysext.service'.
+[  137.969028] systemd[1]: Created symlink '/etc/systemd/system/factory-reset.target.wants/systemd-tpm2-clear.service' → '/usr/lib/systemd/system/systemd-tpm2-clear.service'.
+[  137.969032] systemd[1]: Created symlink '/etc/systemd/system/zfs-import.target.wants/zfs-import-cache.service' → '/usr/lib/systemd/system/zfs-import-cache.service'.
+[  137.969034] systemd[1]: Created symlink '/etc/systemd/system/zfs.target.wants/zfs-import.target' → '/usr/lib/systemd/system/zfs-import.target'.
+[  137.969036] systemd[1]: Created symlink '/etc/systemd/system/zfs.target.wants/zfs-mount.service' → '/usr/lib/systemd/system/zfs-mount.service'.
+[  137.969038] systemd[1]: Created symlink '/etc/systemd/system/zfs.target.wants/zfs-share.service' → '/usr/lib/systemd/system/zfs-share.service'.
+[  137.969039] systemd[1]: Created symlink '/etc/systemd/system/zfs-volumes.target.wants/zfs-volume-wait.service' → '/usr/lib/systemd/system/zfs-volume-wait.service'.
+[  137.969041] systemd[1]: Created symlink '/etc/systemd/system/zed.service' → '/usr/lib/systemd/system/zfs-zed.service'.
+[  137.969043] systemd[1]: Created symlink '/etc/systemd/system/zfs.target.wants/zfs-zed.service' → '/usr/lib/systemd/system/zfs-zed.service'.
+[  137.969045] systemd[1]: Created symlink '/etc/systemd/system/multi-user.target.wants/zfs.target' → '/usr/lib/systemd/system/zfs.target'.
+[  138.173954] systemd[1]: Listening on Network Management Metrics Varlink Socket.
+[  138.174165] systemd[1]: Listening on Network Management Varlink Socket.
+[  138.174349] systemd[1]: Listening on Network Management Netlink Socket.
+[  138.180713] systemd[1]: Listening on CGroup Report Varlink Socket.
+[  138.180957] systemd[1]: Listening on Resolve Monitor Varlink Socket.
+[  138.181208] systemd[1]: Listening on Resolve Service Varlink Socket.
+[  138.186426] systemd[1]: Listening on udev Varlink Socket.
+[  138.241339] systemd[1]: Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[  141.425256] i915.modeset=1 is deprecated. Please remove it and the 'nomodeset' kernel parameter instead.
+[  141.425649] i915 0000:00:02.0: [drm] Found coffeelake (device ID 3e9b) integrated display version 9.00 stepping N/A
+[  141.443981] i915 0000:00:02.0: vgaarb: deactivate vga console
+[  141.482388] i915 0000:00:02.0: vgaarb: VGA decodes changed: olddecodes=io+mem,decodes=io:owns=io+mem
+[  141.484081] mei_hdcp 0000:00:16.0-b638ab7e-94e2-4ea2-a552-d1c54b627f04: bound 0000:00:02.0 (ops i915_hdcp_ops [i915])
+[  141.533564] i915 0000:00:02.0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+[  141.539889] i915 0000:00:02.0: [drm] Registered 3 planes with drm panic
+[  141.585039] [drm] Initialized i915 1.6.0 for 0000:00:02.0 on minor 1
+[  141.587892] fbcon: i915drmfb (fb0) is primary device
+[  141.608185] i915 0000:00:02.0: [drm] fb0: i915drmfb frame buffer device
+[  142.169964] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops intel_audio_component_bind_ops [i915])
+[  154.055285] r8169 0000:3b:00.0 enp59s0: Link is Down
+[  888.230679] usb 1-1: Product: Keychron Link 
+[  888.237144] input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:3434:D030.0002/input/input18
+[  888.237549] hid-generic 0003:3434:D030.0002: input,hidraw1: USB HID v1.11 Mouse [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input0
+[  888.240115] input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:3434:D030.0003/input/input19
+[  888.240235] input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:3434:D030.0003/input/input20
+[  888.240543] hid-generic 0003:3434:D030.0003: input,hiddev96,hidraw2: USB HID v1.11 Joystick [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input1
+[  888.243283] input: Keychron  Keychron Link  Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.2/0003:3434:D030.0004/input/input21
+[  888.318798] hid-generic 0003:3434:D030.0004: input,hidraw3: USB HID v1.11 Keyboard [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input2
+[  888.321242] hid-generic 0003:3434:D030.0005: hiddev97,hidraw4: USB HID v1.11 Device [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input3
+[ 2023.840379] usb 1-3: Product: Keychron Link 
+[ 2023.845829] input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.0/0003:3434:D030.0006/input/input22
+[ 2023.846274] hid-generic 0003:3434:D030.0006: input,hidraw1: USB HID v1.11 Mouse [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input0
+[ 2023.848794] input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.1/0003:3434:D030.0007/input/input23
+[ 2023.848995] input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.1/0003:3434:D030.0007/input/input24
+[ 2023.849458] hid-generic 0003:3434:D030.0007: input,hiddev96,hidraw2: USB HID v1.11 Joystick [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input1
+[ 2023.852338] input: Keychron  Keychron Link  Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.2/0003:3434:D030.0008/input/input25
+[ 2023.927024] hid-generic 0003:3434:D030.0008: input,hidraw3: USB HID v1.11 Keyboard [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input2
+[ 2023.928371] hid-generic 0003:3434:D030.0009: hiddev97,hidraw4: USB HID v1.11 Device [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input3

@@ -1,0 +1,61 @@
+name: Bug report
+description: Something in the build does not work on the same hardware
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing: this repository documents **one specific machine** (Acer Predator Triton
+        500 PT515-51, i7-8750H, UHD 630, ALC289, Intel CNVi). Read `docs/BUILD-REFERENCE.md`
+        §12 "Rejected approaches" first — many "bugs" are known dead ends.
+
+        **Do not paste serial numbers, hardware UUIDs, MAC addresses or Apple account data.**
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and build
+      placeholder: "26.7.2 (25G332)"
+    validations:
+      required: true
+  - type: input
+    id: opencore
+    attributes:
+      label: OpenCore version
+      placeholder: "1.0.8"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: Exact symptom, when it started, and whether it is reproducible.
+    validations:
+      required: true
+  - type: textarea
+    id: changed
+    attributes:
+      label: What changed since it last worked
+      description: Kext updates, macOS update, config edits, BIOS settings — anything.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: |
+        Paste relevant output. Useful commands:
+        `kmutil showloaded --list-only | grep -v com.apple`
+        `echo status | nc -U /var/run/predatorsense.sock`
+        `log show --last 10m --predicate 'process == "..."'`
+        A photo of a verbose-boot screen is fine.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I read the rejected-approaches section and this is not one of them.
+          required: true
+        - label: I have a backup of my EFI and a bootable USB.
+          required: true
+        - label: I removed all serial numbers, UUIDs and MAC addresses from this report.
+          required: true

@@ -1,0 +1,27 @@
+Oct 06 13:42:32 CachyOS systemd[1]: Starting Bluetooth service...
+Oct 06 13:42:32 CachyOS bluetoothd[876]: Bluetooth daemon 5.87
+Oct 06 13:42:33 CachyOS systemd[1]: Started Bluetooth service.
+Oct 06 13:42:33 CachyOS bluetoothd[876]: Starting SDP server
+Oct 06 13:42:33 CachyOS bluetoothd[876]: Bluetooth management interface 1.23 initialized
+Oct 06 13:42:33 CachyOS bluetoothd[876]: Battery Provider Manager created
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/ldac
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/aptx_hd
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_hd
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/aptx
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/aac
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aac
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/opus_g
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/opus_g
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/sbc
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/sbc
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_1
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_0
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/faststream
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/faststream_duplex
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/opus_05
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/opus_05
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSink/opus_05_duplex
+Oct 06 13:42:51 CachyOS bluetoothd[876]: Endpoint registered: sender=:1.28 path=/MediaEndpoint/A2DPSource/opus_05_duplex

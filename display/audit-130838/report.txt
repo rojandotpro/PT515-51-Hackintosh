@@ -1,0 +1,58 @@
+=== Display audit ===
+Tue Oct  6 13:08:38 UTC 2026
+
+=== DRM connectors ===
+card1
+card1-eDP-1
+renderD128
+version
+
+No connected eDP/LVDS connector found.
+
+=== XRandR ===
+Screen 0: minimum 16 x 16, current 1920 x 1080, maximum 32767 x 32767
+eDP-1 connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 344mm x 193mm
+	RANDR Emulation: 1 
+	non-desktop: 0 
+		supported: 0, 1
+   1920x1080    143.88*+
+   1440x1080    143.80  
+   1400x1050    143.89  
+   1280x1024    143.79  
+   1280x960     143.86  
+   1152x864     143.92  
+   1024x768     143.87  
+   800x600      143.83  
+   640x480      143.85  
+   320x240      142.05  
+   1680x1050    143.88  
+   1440x900     143.86  
+   1280x800     143.84  
+   1152x720     143.77  
+   960x600      143.72  
+   928x580      143.50  
+   800x500      143.68  
+   768x480      143.69  
+   720x480      143.85  
+   640x400      143.37  
+   320x200      141.40  
+   1600x900     143.93  
+   1368x768     143.77  
+   1280x720     143.67  
+   1024x576     143.91  
+   864x486      143.63  
+   720x400      143.88  
+   640x350      143.57  
+
+=== DRM/i915 ===
+
+=== GPU/kernel ===
+Linux CachyOS 7.1.6-1-cachyos #1 SMP PREEMPT_DYNAMIC Sun, 09 Aug 2026 14:26:58 +0000 x86_64 GNU/Linux
+00:02.0 VGA compatible controller [0300]: Intel Corporation CoffeeLake-H GT2 [UHD Graphics 630] [8086:3e9b]
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: i915
+	Kernel modules: i915
+00:04.0 Signal processing controller [1180]: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem [8086:1903] (rev 07)
+
+REPORT_DIR=/home/liveuser/Desktop/display-audit-20261006-130838
+Copy report.txt, edid-decode.txt (if present), and panel-edid.bin back for analysis.

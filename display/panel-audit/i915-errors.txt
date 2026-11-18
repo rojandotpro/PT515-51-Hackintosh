@@ -1,0 +1,114 @@
+[    0.000000] Command line: BOOT_IMAGE=/arch/boot/x86_64/vmlinuz-linux-cachyos archisobasedir=arch archisosearchuuid=2026-08-09-15-47-03-00 cow_spacesize=10G copytoram=auto module_blacklist=pcspkr i915.modeset=1 amdgpu.modeset=1 nvme_load=yes
+[    0.049504] Kernel command line: BOOT_IMAGE=/arch/boot/x86_64/vmlinuz-linux-cachyos archisobasedir=arch archisosearchuuid=2026-08-09-15-47-03-00 cow_spacesize=10G copytoram=auto module_blacklist=pcspkr i915.modeset=1 amdgpu.modeset=1 nvme_load=yes
+[    1.163200] usb 2-4: enable of device-initiated U1 failed.
+[    1.756102] RAS: Correctable Errors collector initialized.
+[    2.120354] wmi_bus wmi_bus-PNP0C14:00: [Firmware Bug]: WMBF method block execution control method not found
+[    2.151645] usb 2-4: disable of device-initiated U1 failed.
+[    2.174393] usb 2-4: enable of device-initiated U1 failed.
+[  137.968992] systemd[1]: Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-boot-clear-sysfail.service' → '/usr/lib/systemd/system/systemd-boot-clear-sysfail.service'.
+[  138.242510] systemd[1]: Clear SysFail Entry If The Boot Is Successful skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/LoaderEntrySysFail-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f
+[  138.242591] systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[  141.425256] i915.modeset=1 is deprecated. Please remove it and the 'nomodeset' kernel parameter instead.
+[  141.425649] i915 0000:00:02.0: [drm] Found coffeelake (device ID 3e9b) integrated display version 9.00 stepping N/A
+[  141.443981] i915 0000:00:02.0: vgaarb: deactivate vga console
+[  141.461764] Bluetooth: hci0: Firmware revision 0.1 build 20 week 53 2019
+[  141.482388] i915 0000:00:02.0: vgaarb: VGA decodes changed: olddecodes=io+mem,decodes=io:owns=io+mem
+[  141.484081] mei_hdcp 0000:00:16.0-b638ab7e-94e2-4ea2-a552-d1c54b627f04: bound 0000:00:02.0 (ops i915_hdcp_ops [i915])
+[  141.505353] Bluetooth: hci0: Found device firmware: intel/ibt-17-16-1.sfi
+[  141.505380] Bluetooth: hci0: Firmware Version: 201-12.24
+[  141.506788] Bluetooth: hci0: FW download error recovery failed (-19)
+[  141.506803] Bluetooth: hci0: sending frame failed (-19)
+[  141.506807] Bluetooth: hci0: Reading supported features failed (-19)
+[  141.506808] Bluetooth: hci0: Error reading debug features
+[  141.506815] Bluetooth: hci0: sending frame failed (-19)
+[  141.506818] Bluetooth: hci0: Failed to read MSFT supported features (-19)
+[  141.533564] i915 0000:00:02.0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+[  141.539889] i915 0000:00:02.0: [drm] Registered 3 planes with drm panic
+[  141.585039] [drm] Initialized i915 1.6.0 for 0000:00:02.0 on minor 1
+[  141.587892] fbcon: i915drmfb (fb0) is primary device
+[  141.608185] i915 0000:00:02.0: [drm] fb0: i915drmfb frame buffer device
+[  141.780407] iwlwifi 0000:00:14.3: loaded firmware version 46.7e3e4b69.0 9000-pu-b0-jf-b0-46.ucode op_mode iwlmvm
+[  142.039777] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[  142.043513] Bluetooth: hci0: Found device firmware: intel/ibt-17-16-1.sfi
+[  142.043563] Bluetooth: hci0: Firmware Version: 201-12.24
+[  142.169964] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops intel_audio_component_bind_ops [i915])
+[  143.652186] Bluetooth: hci0: Waiting for firmware download to complete
+[  143.652812] Bluetooth: hci0: Firmware loaded in 1571577 usecs
+[  143.687882] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[  168.200452] audit: type=1130 audit(1791294168.042:150): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-time-wait-sync comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[  249.851703] device offline error, dev sda, sector 730635 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  249.851720] Buffer I/O error on dev sda1, logical block 728587, lost async page write
+[  249.851730] device offline error, dev sda, sector 730638 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  249.851738] Buffer I/O error on dev sda1, logical block 728590, lost async page write
+[  249.851746] device offline error, dev sda, sector 730640 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+[  249.851752] Buffer I/O error on dev sda1, logical block 728592, lost async page write
+[  249.851757] Buffer I/O error on dev sda1, logical block 728593, lost async page write
+[  249.851762] Buffer I/O error on dev sda1, logical block 728594, lost async page write
+[  249.851766] Buffer I/O error on dev sda1, logical block 728595, lost async page write
+[  249.851771] device offline error, dev sda, sector 730647 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  249.851778] Buffer I/O error on dev sda1, logical block 728599, lost async page write
+[  249.851783] device offline error, dev sda, sector 730649 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+[  249.851789] Buffer I/O error on dev sda1, logical block 728601, lost async page write
+[  249.851794] Buffer I/O error on dev sda1, logical block 728602, lost async page write
+[  249.851798] Buffer I/O error on dev sda1, logical block 728603, lost async page write
+[  249.851804] device offline error, dev sda, sector 730654 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+[  249.851812] device offline error, dev sda, sector 677254657 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+[  249.859964] device offline error, dev sda, sector 1191649281 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  249.859967] device offline error, dev sda, sector 1191655411 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  250.037359] sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+[  252.482563] usb 2-4: enable of device-initiated U1 failed.
+[  252.483555] usb 2-4: disable of device-initiated U1 failed.
+[  252.512680] usb 2-4: enable of device-initiated U1 failed.
+[  328.826929] device offline error, dev sda, sector 730635 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  328.826947] buffer_io_error: 8 callbacks suppressed
+[  328.826950] Buffer I/O error on dev sda1, logical block 728587, lost async page write
+[  328.826962] device offline error, dev sda, sector 730638 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+[  328.826970] Buffer I/O error on dev sda1, logical block 728590, lost async page write
+[  328.826979] device offline error, dev sda, sector 730640 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+[  328.826986] Buffer I/O error on dev sda1, logical block 728592, lost async page write
+[  328.826991] Buffer I/O error on dev sda1, logical block 728593, lost async page write
+[  328.826996] Buffer I/O error on dev sda1, logical block 728594, lost async page write
+[  328.827000] Buffer I/O error on dev sda1, logical block 728595, lost async page write
+[  328.827006] device offline error, dev sda, sector 730649 op 0x1:(WRITE) flags 0x800000 phys_seg 3 prio class 2
+[  328.827012] Buffer I/O error on dev sda1, logical block 728601, lost async page write
+[  328.827017] Buffer I/O error on dev sda1, logical block 728602, lost async page write
+[  328.827043] Buffer I/O error on dev sda1, logical block 728603, lost async page write
+[  328.827049] device offline error, dev sda, sector 730654 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+[  328.827055] Buffer I/O error on dev sda1, logical block 728606, lost async page write
+[  328.827062] device offline error, dev sda, sector 5724695 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+[  328.827072] device offline error, dev sda, sector 677254658 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+[  329.003145] sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+[  332.033501] usb 2-4: enable of device-initiated U1 failed.
+[  332.034466] usb 2-4: disable of device-initiated U1 failed.
+[  332.063556] usb 2-4: enable of device-initiated U1 failed.
+[  420.864100] device offline error, dev sda, sector 5724696 op 0x1:(WRITE) flags 0x800000 phys_seg 17 prio class 2
+[  420.864116] buffer_io_error: 7 callbacks suppressed
+[  420.864120] Buffer I/O error on dev sda1, logical block 5722648, lost async page write
+[  420.864130] Buffer I/O error on dev sda1, logical block 5722649, lost async page write
+[  420.864136] Buffer I/O error on dev sda1, logical block 5722650, lost async page write
+[  420.864141] Buffer I/O error on dev sda1, logical block 5722651, lost async page write
+[  420.864145] Buffer I/O error on dev sda1, logical block 5722652, lost async page write
+[  420.864150] Buffer I/O error on dev sda1, logical block 5722653, lost async page write
+[  420.864155] Buffer I/O error on dev sda1, logical block 5722654, lost async page write
+[  420.864159] Buffer I/O error on dev sda1, logical block 5722655, lost async page write
+[  420.864166] Buffer I/O error on dev sda1, logical block 5722656, lost async page write
+[  420.864170] Buffer I/O error on dev sda1, logical block 5722657, lost async page write
+[  421.035152] sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+[  426.315204] usb 2-8: enable of device-initiated U1 failed.
+[  426.315826] usb 2-8: disable of device-initiated U1 failed.
+[  426.345032] usb 2-8: enable of device-initiated U1 failed.
+[  972.327136] audit: type=1110 audit(1791294972.169:179): pid=3936 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[  972.376698] audit: type=1104 audit(1791294972.218:182): pid=3936 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[  993.991165] audit: type=1110 audit(1791294993.833:184): pid=3942 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[  994.003437] audit: type=1104 audit(1791294993.845:187): pid=3942 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1017.921500] audit: type=1110 audit(1791295018.572:196): pid=4013 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1017.933825] audit: type=1104 audit(1791295018.584:199): pid=4013 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1019.141962] audit: type=1110 audit(1791295019.792:201): pid=4022 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1019.155967] audit: type=1104 audit(1791295019.806:204): pid=4022 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1028.548401] audit: type=1110 audit(1791295029.199:207): pid=4032 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1028.562182] audit: type=1104 audit(1791295029.213:210): pid=4032 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1036.233710] audit: type=1110 audit(1791295036.884:212): pid=4036 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1036.246795] audit: type=1104 audit(1791295036.897:215): pid=4036 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1044.064986] audit: type=1110 audit(1791295044.716:217): pid=4040 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1046.804272] audit: type=1104 audit(1791295047.457:220): pid=4040 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/1 res=success'
+[ 1901.411642] audit: type=1110 audit(1791295902.044:234): pid=5429 uid=1000 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_faillock,pam_permit,pam_env,pam_faillock acct="root" exe="/usr/bin/sudo" hostname=CachyOS addr=? terminal=/dev/pts/2 res=success'

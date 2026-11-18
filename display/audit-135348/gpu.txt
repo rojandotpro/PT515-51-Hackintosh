@@ -1,0 +1,75 @@
+00:00.0 Host bridge [0600]: Intel Corporation 8th/9th Gen Core Processor Host Bridge / DRAM Registers [8086:3ec4] (rev 07)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: skl_uncore
+00:02.0 VGA compatible controller [0300]: Intel Corporation CoffeeLake-H GT2 [UHD Graphics 630] [8086:3e9b]
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: i915
+	Kernel modules: i915
+00:04.0 Signal processing controller [1180]: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem [8086:1903] (rev 07)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: proc_thermal
+	Kernel modules: processor_thermal_device_pci_legacy
+00:12.0 Signal processing controller [1180]: Intel Corporation 300/C240 Series Chipset Family Thermal Subsystem [8086:a379] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: intel_pch_thermal
+	Kernel modules: intel_pch_thermal
+00:14.0 USB controller [0c03]: Intel Corporation 300/C240 Series Chipset Family USB 3.1 xHCI [8086:a36d] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+00:14.2 RAM memory [0500]: Intel Corporation 300/C240 Series Chipset Family Shared SRAM [8086:a36f] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+00:14.3 Network controller [0280]: Intel Corporation 300/C240 Series Chipset Family CNVi Wi-Fi [8086:a370] (rev 10)
+	Subsystem: Rivet Networks Killer(R) Wireless-AC 1550i Wireless Network Adapter (9560NGW) [1a56:1552]
+	Kernel driver in use: iwlwifi
+	Kernel modules: iwlwifi
+00:15.0 Serial bus controller [0c80]: Intel Corporation 300/C240 Series Chipset Family I2C Controller #0 [8086:a368] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+00:15.1 Serial bus controller [0c80]: Intel Corporation 300/C240 Series Chipset Family I2C Controller #1 [8086:a369] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+00:16.0 Communication controller [0780]: Intel Corporation 300/C240 Series Chipset Family HECI #1 [8086:a360] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: mei_me
+	Kernel modules: mei_me
+00:1b.0 PCI bridge [0604]: Intel Corporation 300/C240 Series Chipset Family PCIe Root Port #17 [8086:a340] (rev f0)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:1b.4 PCI bridge [0604]: Intel Corporation 300/C240 Series Chipset Family PCIe Root Port #21 [8086:a32c] (rev f0)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:1d.0 PCI bridge [0604]: Intel Corporation 300/C240 Series Chipset Family PCIe Root Port #9 [8086:a330] (rev f0)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:1d.7 PCI bridge [0604]: Intel Corporation 300/C240 Series Chipset Family PCIe Root Port #16 [8086:a337] (rev f0)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:1f.0 ISA bridge [0601]: Intel Corporation HM370 Chipset LPC/eSPI Controller [8086:a30d] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+00:1f.3 Audio device [0403]: Intel Corporation 300/C240 Series Chipset Family HD Audio [8086:a348] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_soc_avs, snd_sof_pci_intel_cnl, snd_hda_intel
+00:1f.4 SMBus [0c05]: Intel Corporation 300/C240 Series Chipset Family SMBus [8086:a323] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+00:1f.5 Serial bus controller [0c80]: Intel Corporation 300/C240 Series Chipset Family SPI (Flash) Controller [8086:a324] (rev 10)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: intel-spi
+	Kernel modules: spi_intel_pci
+39:00.0 Non-Volatile memory controller [0108]: Sandisk Corp SanDisk Extreme Pro / WD Black 2018/SN750/PC SN720 NVMe SSD [15b7:5002]
+	Subsystem: Sandisk Corp SanDisk Extreme Pro / WD Black 2018/SN750/PC SN720 NVMe SSD [15b7:5002]
+	Kernel driver in use: nvme
+	Kernel modules: nvme
+3b:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. Killer E3000 2.5GbE Controller [10ec:3000] (rev 03)
+	Subsystem: Acer Incorporated [ALI] Device [1025:132d]
+	Kernel driver in use: r8169
+	Kernel modules: r8169

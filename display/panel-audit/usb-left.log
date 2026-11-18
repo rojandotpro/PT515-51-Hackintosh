@@ -1,0 +1,188 @@
+Oct 06 13:42:18 CachyOS kernel: ACPI: \_SB_.PCI0.XDCI.USBC: New power resource
+Oct 06 13:42:18 CachyOS kernel: ACPI: bus type USB registered
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new interface driver usbfs
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new interface driver hub
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new device driver usb
+Oct 06 13:42:18 CachyOS kernel: xhci_hcd 0000:00:14.0: xHCI Host Controller
+Oct 06 13:42:18 CachyOS kernel: xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+Oct 06 13:42:18 CachyOS kernel: xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x110 quirks 0x0000000000009810
+Oct 06 13:42:18 CachyOS kernel: xhci_hcd 0000:00:14.0: xHCI Host Controller
+Oct 06 13:42:18 CachyOS kernel: xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+Oct 06 13:42:18 CachyOS kernel: xhci_hcd 0000:00:14.0: Host supports USB 3.1 Enhanced SuperSpeed
+Oct 06 13:42:18 CachyOS kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.01
+Oct 06 13:42:18 CachyOS kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 06 13:42:18 CachyOS kernel: usb usb1: Product: xHCI Host Controller
+Oct 06 13:42:18 CachyOS kernel: usb usb1: Manufacturer: Linux 7.1.6-1-cachyos xhci-hcd
+Oct 06 13:42:18 CachyOS kernel: usb usb1: SerialNumber: 0000:00:14.0
+Oct 06 13:42:18 CachyOS kernel: hub 1-0:1.0: USB hub found
+Oct 06 13:42:18 CachyOS kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.01
+Oct 06 13:42:18 CachyOS kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 06 13:42:18 CachyOS kernel: usb usb2: Product: xHCI Host Controller
+Oct 06 13:42:18 CachyOS kernel: usb usb2: Manufacturer: Linux 7.1.6-1-cachyos xhci-hcd
+Oct 06 13:42:18 CachyOS kernel: usb usb2: SerialNumber: 0000:00:14.0
+Oct 06 13:42:18 CachyOS kernel: hub 2-0:1.0: USB hub found
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new interface driver usbserial_generic
+Oct 06 13:42:18 CachyOS kernel: usbserial: USB Serial support registered for generic
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new interface driver usbhid
+Oct 06 13:42:18 CachyOS kernel: usbhid: USB HID core driver
+Oct 06 13:42:18 CachyOS kernel: usb 1-2: new high-speed USB device number 2 using xhci_hcd
+Oct 06 13:42:18 CachyOS kernel: usb 1-2: New USB device found, idVendor=0781, idProduct=5567, bcdDevice= 1.27
+Oct 06 13:42:18 CachyOS kernel: usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 06 13:42:18 CachyOS kernel: usb 1-2: Product: Cruzer Blade
+Oct 06 13:42:18 CachyOS kernel: usb 1-2: Manufacturer: SanDisk
+Oct 06 13:42:18 CachyOS kernel: usb 1-2: SerialNumber: 4C531001541109123175
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: new SuperSpeed USB device number 2 using xhci_hcd
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: New USB device found, idVendor=0bda, idProduct=9201, bcdDevice=f2.00
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: Product: RTL9201
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: Manufacturer: Realtek
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: SerialNumber: 012345678999
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 13:42:18 CachyOS kernel: usb 1-5: new high-speed USB device number 3 using xhci_hcd
+Oct 06 13:42:18 CachyOS kernel: usb 1-5: New USB device found, idVendor=1bcf, idProduct=2cb0, bcdDevice= 0.04
+Oct 06 13:42:18 CachyOS kernel: usb 1-5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Oct 06 13:42:18 CachyOS kernel: usb 1-5: Product: HD User Facing
+Oct 06 13:42:18 CachyOS kernel: usb 1-5: Manufacturer: KS0HD0501384400FA3LM04
+Oct 06 13:42:18 CachyOS kernel: usb 1-14: new full-speed USB device number 4 using xhci_hcd
+Oct 06 13:42:18 CachyOS kernel: usb 1-14: New USB device found, idVendor=8087, idProduct=0aaa, bcdDevice= 0.02
+Oct 06 13:42:18 CachyOS kernel: usb 1-14: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Oct 06 13:42:18 CachyOS kernel: RAS: Correctable Errors collector initialized.
+Oct 06 13:42:18 CachyOS kernel: usb-storage 1-2:1.0: USB Mass Storage device detected
+Oct 06 13:42:18 CachyOS kernel: scsi host0: usb-storage 1-2:1.0
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new interface driver usb-storage
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: disable of device-initiated U1 failed.
+Oct 06 13:42:18 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 13:42:18 CachyOS kernel: usbcore: registered new interface driver uas
+Oct 06 13:42:18 CachyOS systemd[1]: Applying preset policy.
+Oct 06 13:42:18 CachyOS systemd[1]: Created symlink '/etc/systemd/system/factory-reset.target.wants/systemd-tpm2-clear.service' → '/usr/lib/systemd/system/systemd-tpm2-clear.service'.
+Oct 06 13:42:18 CachyOS systemd[1]: Populated /etc with preset unit settings.
+Oct 06 13:42:18 CachyOS systemd[1]: Listening on Factory Reset Management.
+Oct 06 13:42:21 CachyOS kernel: usbcore: registered new interface driver btusb
+Oct 06 13:42:21 CachyOS kernel: usb 1-14: USB disconnect, device number 4
+Oct 06 13:42:21 CachyOS kernel: Bluetooth: hci0: FW download error recovery failed (-19)
+Oct 06 13:42:21 CachyOS kernel: Bluetooth: hci0: Error reading debug features
+Oct 06 13:42:21 CachyOS kernel: usb 1-14: new full-speed USB device number 5 using xhci_hcd
+Oct 06 13:42:21 CachyOS kernel: usbcore: registered new interface driver uvcvideo
+Oct 06 13:42:21 CachyOS kernel: usb 1-14: New USB device found, idVendor=8087, idProduct=0aaa, bcdDevice= 0.02
+Oct 06 13:42:21 CachyOS kernel: usb 1-14: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Oct 06 13:44:09 CachyOS kernel: usb 2-4: USB disconnect, device number 2
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 730635 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728587, lost async page write
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 730638 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728590, lost async page write
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 730640 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728592, lost async page write
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728593, lost async page write
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728594, lost async page write
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728595, lost async page write
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 730647 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728599, lost async page write
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 730649 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728601, lost async page write
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728602, lost async page write
+Oct 06 13:44:09 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728603, lost async page write
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 730654 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 677254657 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 1191649281 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:44:09 CachyOS kernel: device offline error, dev sda, sector 1191655411 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:44:09 CachyOS kernel: sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: new SuperSpeed USB device number 3 using xhci_hcd
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: New USB device found, idVendor=0bda, idProduct=9201, bcdDevice=f2.00
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: Product: RTL9201
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: Manufacturer: Realtek
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: SerialNumber: 012345678999
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: disable of device-initiated U1 failed.
+Oct 06 13:44:12 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 13:45:28 CachyOS kernel: usb 2-4: USB disconnect, device number 3
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 730635 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:45:28 CachyOS kernel: buffer_io_error: 8 callbacks suppressed
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728587, lost async page write
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 730638 op 0x1:(WRITE) flags 0x800000 phys_seg 1 prio class 2
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728590, lost async page write
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 730640 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728592, lost async page write
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728593, lost async page write
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728594, lost async page write
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728595, lost async page write
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 730649 op 0x1:(WRITE) flags 0x800000 phys_seg 3 prio class 2
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728601, lost async page write
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728602, lost async page write
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728603, lost async page write
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 730654 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+Oct 06 13:45:28 CachyOS kernel: Buffer I/O error on dev sda1, logical block 728606, lost async page write
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 5724695 op 0x1:(WRITE) flags 0x800000 phys_seg 2 prio class 2
+Oct 06 13:45:28 CachyOS kernel: device offline error, dev sda, sector 677254658 op 0x1:(WRITE) flags 0x800000 phys_seg 4 prio class 2
+Oct 06 13:45:28 CachyOS kernel: sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+Oct 06 13:45:30 CachyOS kernel: usb 1-1: new high-speed USB device number 6 using xhci_hcd
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: new SuperSpeed USB device number 4 using xhci_hcd
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: New USB device found, idVendor=0bda, idProduct=9201, bcdDevice=f2.00
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: Product: RTL9201
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: Manufacturer: Realtek
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: SerialNumber: 012345678999
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: disable of device-initiated U1 failed.
+Oct 06 13:45:31 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 13:47:00 CachyOS kernel: usb 2-4: USB disconnect, device number 4
+Oct 06 13:47:00 CachyOS kernel: device offline error, dev sda, sector 5724696 op 0x1:(WRITE) flags 0x800000 phys_seg 17 prio class 2
+Oct 06 13:47:00 CachyOS kernel: buffer_io_error: 7 callbacks suppressed
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722648, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722649, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722650, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722651, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722652, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722653, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722654, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722655, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722656, lost async page write
+Oct 06 13:47:00 CachyOS kernel: Buffer I/O error on dev sda1, logical block 5722657, lost async page write
+Oct 06 13:47:00 CachyOS kernel: sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: new SuperSpeed USB device number 5 using xhci_hcd
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: New USB device found, idVendor=0bda, idProduct=9201, bcdDevice=f2.00
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: Product: RTL9201
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: Manufacturer: Realtek
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: SerialNumber: 012345678999
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: enable of device-initiated U1 failed.
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: disable of device-initiated U1 failed.
+Oct 06 13:47:06 CachyOS kernel: usb 2-8: enable of device-initiated U1 failed.
+Oct 06 13:54:47 CachyOS kernel: usb 1-1: new full-speed USB device number 7 using xhci_hcd
+Oct 06 13:54:48 CachyOS kernel: usb 1-1: New USB device found, idVendor=3434, idProduct=d030, bcdDevice=d3.01
+Oct 06 13:54:48 CachyOS kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Oct 06 13:54:48 CachyOS kernel: usb 1-1: Product: Keychron Link 
+Oct 06 13:54:48 CachyOS kernel: usb 1-1: Manufacturer: Keychron 
+Oct 06 13:54:48 CachyOS kernel: input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:3434:D030.0002/input/input18
+Oct 06 13:54:48 CachyOS kernel: hid-generic 0003:3434:D030.0002: input,hidraw1: USB HID v1.11 Mouse [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input0
+Oct 06 13:54:48 CachyOS kernel: input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:3434:D030.0003/input/input19
+Oct 06 13:54:48 CachyOS kernel: input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:3434:D030.0003/input/input20
+Oct 06 13:54:48 CachyOS kernel: hid-generic 0003:3434:D030.0003: input,hiddev96,hidraw2: USB HID v1.11 Joystick [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input1
+Oct 06 13:54:48 CachyOS kernel: input: Keychron  Keychron Link  Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.2/0003:3434:D030.0004/input/input21
+Oct 06 13:54:48 CachyOS kernel: hid-generic 0003:3434:D030.0004: input,hidraw3: USB HID v1.11 Keyboard [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input2
+Oct 06 13:54:48 CachyOS kernel: hid-generic 0003:3434:D030.0005: hiddev97,hidraw4: USB HID v1.11 Device [Keychron  Keychron Link ] on usb-0000:00:14.0-1/input3
+Oct 06 14:13:28 CachyOS kernel: usb 2-8: USB disconnect, device number 5
+Oct 06 14:13:28 CachyOS kernel: sd 1:0:0:0: [sda] Synchronize Cache(10) failed: Result: hostbyte=DID_ERROR driverbyte=DRIVER_OK
+Oct 06 14:13:30 CachyOS kernel: usb 1-1: USB disconnect, device number 7
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: new SuperSpeed USB device number 6 using xhci_hcd
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: New USB device found, idVendor=0bda, idProduct=9201, bcdDevice=f2.00
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: Product: RTL9201
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: Manufacturer: Realtek
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: SerialNumber: 012345678999
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: disable of device-initiated U1 failed.
+Oct 06 14:13:36 CachyOS kernel: usb 2-4: enable of device-initiated U1 failed.
+Oct 06 14:13:44 CachyOS kernel: usb 1-3: new full-speed USB device number 8 using xhci_hcd
+Oct 06 14:13:44 CachyOS kernel: usb 1-3: New USB device found, idVendor=3434, idProduct=d030, bcdDevice=d3.01
+Oct 06 14:13:44 CachyOS kernel: usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Oct 06 14:13:44 CachyOS kernel: usb 1-3: Product: Keychron Link 
+Oct 06 14:13:44 CachyOS kernel: usb 1-3: Manufacturer: Keychron 
+Oct 06 14:13:44 CachyOS kernel: input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.0/0003:3434:D030.0006/input/input22
+Oct 06 14:13:44 CachyOS kernel: hid-generic 0003:3434:D030.0006: input,hidraw1: USB HID v1.11 Mouse [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input0
+Oct 06 14:13:44 CachyOS kernel: input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.1/0003:3434:D030.0007/input/input23
+Oct 06 14:13:44 CachyOS kernel: input: Keychron  Keychron Link  as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.1/0003:3434:D030.0007/input/input24
+Oct 06 14:13:44 CachyOS kernel: hid-generic 0003:3434:D030.0007: input,hiddev96,hidraw2: USB HID v1.11 Joystick [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input1
+Oct 06 14:13:44 CachyOS kernel: input: Keychron  Keychron Link  Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.2/0003:3434:D030.0008/input/input25
+Oct 06 14:13:44 CachyOS kernel: hid-generic 0003:3434:D030.0008: input,hidraw3: USB HID v1.11 Keyboard [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input2
+Oct 06 14:13:44 CachyOS kernel: hid-generic 0003:3434:D030.0009: hiddev97,hidraw4: USB HID v1.11 Device [Keychron  Keychron Link ] on usb-0000:00:14.0-3/input3
