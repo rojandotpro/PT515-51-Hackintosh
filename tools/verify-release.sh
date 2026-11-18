@@ -59,7 +59,8 @@ codesign --verify --deep --strict "$APP" 2>/dev/null || die "app signature is in
 codesign --verify "$KEXT" 2>/dev/null || die "kext signature is invalid"
 ylw "app and kext signatures: valid"
 
-if codesign -dv "$APP" 2>&1 | grep -qE 'flags=.*adhoc|Signature=adhoc'; then
+SIGINFO="$(codesign -dv "$APP" 2>&1 || true)"
+if printf '%s\n' "$SIGINFO" | grep -qE 'flags=.*adhoc|Signature=adhoc'; then
   ylw "signature type: ad-hoc (expected; not notarised — see docs/SIGNING.md)"
 else
   ylw "signature type: not ad-hoc — check the TeamIdentifier before trusting it"
