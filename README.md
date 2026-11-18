@@ -131,9 +131,20 @@ They are built from the source in this repository and checked against the live m
 | `PredatorSense-1.0.0.zip` | The app, daemon, kext, LaunchDaemon plist and install notes |
 | `PT515-51-EFI-1.0.0.zip` | The complete sanitized OpenCore EFI |
 | `SHA256SUMS.txt` | Checksums for both archives |
+| `verify-release.sh` | Read-only checker for the archives, signatures and EFI config |
 
 > The EFI archive contains **placeholder** SMBIOS values. Generate your own before signing in to
 > iCloud — see [Quick start](#quick-start) step 4.
+
+Verify a download before installing it:
+
+```sh
+./tools/verify-release.sh ~/Downloads
+```
+
+It checks the checksums, both ZIPs, the app and kext signatures, and the EFI config. Nothing is
+installed. The binaries are **ad-hoc signed, not notarised** — see [`docs/SIGNING.md`](docs/SIGNING.md)
+for what that means and the safe way past Gatekeeper.
 
 ---
 
@@ -159,7 +170,9 @@ You need a working macOS install to prepare the USB. Read
 
 > The shipped EFI is a **starting point for the same hardware**, not a universal EFI. It assumes
 > the same CPU/GPU/audio/Wi-Fi combination. Different panel, different Wi-Fi card or a different
-> EC means different patches.
+> EC means different patches. Compatibility is per model and per firmware revision — see
+> [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md#11-compatibility-what-transfers-and-what-does-not)
+> for what transfers to other machines and what must be measured again.
 
 ---
 
@@ -196,6 +209,7 @@ reference/               Handovers, optimisation review, known-good manifest
 | [`docs/GETTING-STARTED.md`](docs/GETTING-STARTED.md) | Build it from zero, step by step |
 | [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md) | **Custom PredatorSense app tutorial** — build a hardware-control app for any laptop |
 | [`docs/STABILITY.md`](docs/STABILITY.md) | Backups, update playbook, monitoring, recovery |
+| [`docs/SIGNING.md`](docs/SIGNING.md) | Ad-hoc signing, Gatekeeper, checksum verification, Developer ID path |
 | [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) | Symptom → cause → fix |
 | [`docs/BUILD-REFERENCE.md`](docs/BUILD-REFERENCE.md) | Every measurement, reverse-engineered interface and rejected approach |
 | [`docs/AI-WORKFLOW.md`](docs/AI-WORKFLOW.md) | The method, prompt patterns and guardrails used to build this |

@@ -78,7 +78,10 @@ remain in the record as evidence, not as recommendations.
 
 ## Licensing position
 
-### The MIT licence covers the human-authored work
+**This section is a disclosure and a statement of intent, not legal advice.** It does not resolve
+copyright or trademark questions for your jurisdiction.
+
+### The MIT licence applies to the published work
 
 [`LICENSE`](../LICENSE) applies to the original code and documentation in this repository: the
 PredatorSense stack under `psec2/`, the AppleALC layout modifications under `audio/`, the scripts
@@ -89,19 +92,25 @@ the code and text written or substantially revised by the maintainer.
 
 ### AI-generated material
 
-Copyright rules for AI output differ by country. In the United States, the Copyright Office requires
-human authorship: material generated purely by a model, with no human creative contribution, is not
-registrable. Where a human selects, arranges, edits or substantially rewrites output, the human
-contribution can be protected — but the scope is fact-specific.
+Copyright rules for AI output differ by country and are still developing. In the United States, the
+Copyright Office requires human authorship: material generated purely by a model, with no human
+creative contribution, is not registrable. Other jurisdictions use different tests — some protect
+the person who makes the arrangements, some have provisions for computer-generated works, and some
+apply a higher originality threshold. Where a human selects, arranges, edits or substantially
+rewrites output, the human contribution can be protected, but the scope is fact-specific.
 
 The practical position taken here:
 
 - **No claim is made that every sentence or line is individually copyrightable.** Some passages began
   as model output.
-- **The repository as a whole is offered under MIT** by its maintainer, who directed the work,
-  verified it and accepts responsibility for it. You may reuse it on those terms.
+- **The repository is offered under MIT as a permission**, not as a warranty that every element is
+  owned. To the extent copyright exists, MIT applies. Where it does not, you may still reuse the
+  material on the same terms.
+- **The maintainer directed, verified and accepts responsibility for the published result**, which is
+  what makes a single licence offer meaningful for the repository as a whole.
 - **No warranty of title is given** beyond what MIT implies. If you need clean-room certainty for a
-  commercial derivative, treat the text as technical reference and write your own prose.
+  commercial derivative, treat the text as technical reference and write your own prose, or obtain
+  your own advice.
 - **No model was asked to reproduce copyrighted text**, and no vendor source code, decompiled binary
   or proprietary document is redistributed here.
 
@@ -109,8 +118,9 @@ The practical position taken here:
 
 The ACPI-WMI method IDs, buffer widths, EC offsets and sensor mappings documented here are
 **functional interface facts** discovered by observing the machine. They are the kind of
-interoperability information clean-room reverse engineering exists to produce. No Acer binary,
-installer, driver, image or asset is included.
+interoperability information reverse engineering exists to produce. Whether extraction of such
+information is permitted depends on your jurisdiction and on any contract that applies to the
+device; no vendor code, binary or document is copied here.
 
 ### Third-party components keep their own licences
 

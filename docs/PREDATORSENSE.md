@@ -77,6 +77,9 @@ kmutil showloaded --list-only | grep PredatorSense
 echo status | nc -U /var/run/predatorsense.sock
 ```
 
+> The release binaries are ad-hoc signed, not notarised. Gatekeeper may block the app on first
+> launch; see [`SIGNING.md`](SIGNING.md) for the safe way through and for checksum verification.
+
 The reply is JSON. A healthy machine shows `"ok":true`, `"ecPresent":true`, `"wmiPresent":true`,
 real temperatures and fan RPM.
 

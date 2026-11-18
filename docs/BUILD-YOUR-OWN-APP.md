@@ -1,12 +1,15 @@
 # Custom PredatorSense App — build your own hardware controller
 
-**A complete tutorial for replacing a vendor's Windows-only hardware control app on macOS — or on
-any OS — using your own laptop as the example.**
+**A complete tutorial for replacing a vendor's Windows-only hardware control app on macOS, using a
+compatible laptop as the example.**
 
 This is the workflow that produced the PredatorSense replacement in this repository: a kernel
 driver, a root daemon and a menu-bar app that control fans, power profiles, keyboard RGB and the
-backlight on an Acer Predator Triton 500. The same method works for a different laptop, a
-different vendor, or a completely different device (a keyboard, a dock, a cooler, a monitor).
+backlight on an Acer Predator Triton 500. **The method is portable; the code is not.** It applies to
+another laptop, another vendor or a different device only when that hardware exposes a control path
+the OS can reach — and each value must still be measured on that machine. Section
+[1.1](#11-compatibility-what-transfers-and-what-does-not) separates what transfers from what has to
+be rediscovered.
 
 It is written so you can follow it end to end, and so an AI assistant can help you without
 inventing hardware facts.
@@ -65,6 +68,26 @@ performance toggle or a hardware button, the questions are the same:
 2. What are its exact methods, argument widths and status codes?
 3. How do I call them safely from a driver?
 4. How do I expose that to a user without letting them brick the machine?
+
+### 1.1 Compatibility: what transfers and what does not
+
+A hardware-control project works on **compatible hardware**, meaning hardware that exposes a usable
+control path. It is not a matter of installing the same code on a different laptop. The method is a
+way to find out whether your machine is compatible — and where.
+
+| Target | What transfers | What must be verified |
+|---|---|---|
+| **This exact model** — PT515-51, BIOS V1.13, macOS 26.7.2 | The whole stack, with the documented caveats | Nothing; this is the measured reference |
+| Another PT515-51 with a different panel, Wi-Fi card or EC revision | Architecture and most patches | Device IDs, EDID, Wi-Fi, thermals |
+| Another Acer Predator using the same `AcerGamingFunction` WMI class | The kext skeleton and driver shape | Method IDs, argument widths, fan ordinals, zone map |
+| A different vendor (Dell, Lenovo, HP, MSI, ASUS) | The method and the three-layer architecture | The control path, the protocol, every value and limit |
+| RGB keyboard or cooler that is a standard HID device | The daemon/UI pattern | The report descriptor; you may need no kext at all |
+| Hardware with no OS-visible control path, or firmware that locks it | Nothing | It is not supported; no userspace trick creates a path |
+| Apple Silicon or non-x86 | Nothing in this kext | Different architecture, different drivers |
+
+**A compatibility claim is a test result, not an intention.** Publish support for a model only after
+you have booted it, exercised every control, killed the daemon, and confirmed the fallback. Section
+[11](#11-port-it-to-another-laptop) is the checklist.
 
 ---
 
@@ -618,7 +641,9 @@ Record each result with a date. A "works" claim without a test is a guess.
 
 ## 11. Port it to another laptop
 
-The architecture stays; the plumbing changes. Work through this list.
+The architecture stays; the plumbing changes. Work through this list. If a step cannot be completed
+— no WMI device, no EC access, an encrypted firmware interface — stop: that model is not a viable
+target for this approach.
 
 | Step | What to look for |
 |---|---|
@@ -647,6 +672,12 @@ The architecture stays; the plumbing changes. Work through this list.
 The three-layer architecture, the fixed-width ABI discipline, the watchdog, and the rule that the
 firmware's own method sequence is the specification.
 
+### Do not publish untested compatibility
+
+"Should work on other Acer laptops" is a support burden and a safety claim. State exactly what you
+tested: model, BIOS version, OS build, and which features. Everything else is untested by definition.
+The release notes in this repository are an example of that discipline.
+
 ---
 
 ## 12. Package and publish
@@ -657,6 +688,8 @@ If you release it:
   release.
 - **Version the ABI.** `PSECStatus` has a `version` field; check it in the daemon.
 - **Publish checksums** for every asset (`shasum -a 256`).
+- **Say what is signed.** Ad-hoc signing is not notarisation, and users deserve to know before
+  Gatekeeper stops them. See [`SIGNING.md`](SIGNING.md).
 - **State the tested configuration** — exact laptop model, BIOS version, OS build. A generic
   claim is a support burden.
 - **Include an uninstall path** in the README, not just an install path.

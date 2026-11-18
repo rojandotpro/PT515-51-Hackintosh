@@ -65,10 +65,12 @@ flowchart LR
 ## Safety first
 
 - **Back up** your EFI and your data. Read [Stability](STABILITY.md) before updating anything.
+- **Verify what you download.** Release binaries are ad-hoc signed, not notarised — use
+  [Signing](SIGNING.md) and `tools/verify-release.sh` before installing.
 - The shipped `config.plist` contains **placeholder** serial, MLB, UUID and ROM. Generate your own
   before signing in to iCloud — see [Getting started](GETTING-STARTED.md#generate-your-own-smbios-identity).
 - This is one machine's configuration. The same model number with a different panel, Wi-Fi card or
-  EC revision needs different patches.
+  EC revision needs different patches. Compatibility is per model and per firmware revision.
 - Installing macOS on non-Apple hardware is unsupported by Apple. You are responsible for licences,
   data and damage.
 
