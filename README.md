@@ -1,5 +1,10 @@
 # Acer Predator Triton 500 (PT515-51) — macOS Tahoe Hackintosh
 
+![macOS](https://img.shields.io/badge/macOS-26.7.2%20Tahoe-000000?logo=apple&logoColor=white)
+![OpenCore](https://img.shields.io/badge/OpenCore-1.0.8-4B8BBE)
+![status](https://img.shields.io/badge/status-working%20daily%20driver-brightgreen)
+![licence](https://img.shields.io/badge/licence-MIT-blue)
+
 A complete, working macOS Tahoe build for the **Acer Predator Triton 500 PT515-51**, including a
 custom driver stack for the laptop's EC/WMI hardware that Acer never documented.
 
@@ -20,17 +25,26 @@ Linux cross-checks, the dead ends, and the method used to get here with AI assis
 
 ---
 
-## Read this first
+## Start here
+
+New to this? Read **[docs/START-HERE.md](docs/START-HERE.md)** — it routes you to the right guide
+in one click.
+
+| If you want to… | Read |
+|---|---|
+| understand how a Hackintosh works at all | [Hackintosh 101](docs/HACKINTOSH-101.md) |
+| build this on the same laptop | [Getting started](docs/GETTING-STARTED.md) |
+| keep an existing build stable | [Stability](docs/STABILITY.md) |
+| fix one specific thing | [Troubleshooting](docs/TROUBLESHOOTING.md) |
+| know exactly what is installed | [Known-good manifest](reference/KNOWN-GOOD.md) |
+| understand this machine deeply | [Build reference](docs/BUILD-REFERENCE.md) |
 
 Several configurations that look correct on paper are **wrong on this machine**. Every one was
 disproved by testing on real hardware, and each is documented with its evidence in
 [`docs/BUILD-REFERENCE.md`](docs/BUILD-REFERENCE.md#12-rejected-approaches--do-not-retry-without-new-evidence).
-
-The recurring failure mode in this project was **confident inference from partial data**. The
+The recurring failure mode in this project was **confident inference from partial data**; the
 corrections all came from hardware measurement — a Linux live USB, ACPI dumps, EC reads and MSR
 reads. Do not re-attempt the rejected approaches without new evidence.
-
-If you only read one section before changing anything, read that one.
 
 ---
 
@@ -128,11 +142,30 @@ psec2/                   PredatorSense replacement: kext + daemon + app + build 
   build.sh               Builds and installs all three
 audio/                   Custom AppleALC ALC289 layout 23 (EQ, gain, limiter, mute fix)
 display/                 90 Hz EDID work, banding tests, panel audits, restore scripts
-tools/                   Health checks, audit collectors, Linux dump scripts, PL1 test
+tools/                   Health check, EFI backup, audit collectors, Linux dumps, PL1 test
 linux/                   Linux cross-check evidence (USB report, EDID decode)
-docs/                    Everything you are reading, plus the full technical reference
-reference/               Historical handovers and the 2026-10-10 optimization review
+docs/                    Guides and the full technical reference (see below)
+reference/               Handovers, optimisation review, known-good manifest
 ```
+
+### Documentation
+
+| Document | What it is for |
+|---|---|
+| [`docs/START-HERE.md`](docs/START-HERE.md) | Choose your path, 60-second summary |
+| [`docs/HACKINTOSH-101.md`](docs/HACKINTOSH-101.md) | The mental model: boot chain, kexts, ACPI, SMBIOS, SIP, glossary |
+| [`docs/GETTING-STARTED.md`](docs/GETTING-STARTED.md) | Build it from zero, step by step |
+| [`docs/STABILITY.md`](docs/STABILITY.md) | Backups, update playbook, monitoring, recovery |
+| [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) | Symptom → cause → fix |
+| [`docs/BUILD-REFERENCE.md`](docs/BUILD-REFERENCE.md) | Every measurement, reverse-engineered interface and rejected approach |
+| [`docs/AI-WORKFLOW.md`](docs/AI-WORKFLOW.md) | The method, prompt patterns and guardrails used to build this |
+| [`docs/PREDATORSENSE.md`](docs/PREDATORSENSE.md) | The custom driver stack and its command protocol |
+| [`docs/AUDIO.md`](docs/AUDIO.md) | ALC289 layout 23, DSP chain, mute fix, rebuild |
+| [`docs/DISPLAY.md`](docs/DISPLAY.md) | EDID override, refresh rates, banding, colour |
+| [`docs/NETWORK.md`](docs/NETWORK.md) | Wi-Fi and Bluetooth stacks, post-update repair |
+| [`docs/SPECIAL-KEYS.md`](docs/SPECIAL-KEYS.md) | Why the media keys cannot be intercepted |
+| [`docs/MACOS27.md`](docs/MACOS27.md) | Why macOS 27 will not run here |
+| [`reference/KNOWN-GOOD.md`](reference/KNOWN-GOOD.md) | Exact versions of every component, verified 2026-11-18 |
 
 The **technical reference** — reverse-engineered WMI methods, EC registers, fan ordinals, MSR
 values, audio pin mappings, EDID bytes, rejected approaches — is

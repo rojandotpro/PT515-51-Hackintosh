@@ -31,6 +31,25 @@ AI assistant* can pick up this machine cold and continue work without rediscover
 Last full verification: 2026-09-02 (see §17), cross-checked against a live Linux boot (see §1.1).
 **Three corrections came from that Linux data — see §6.3 (PL2), §8.1 (audio pins) and §9 (I2C1).**
 
+<details>
+<summary><b>Contents</b> — 22 sections, from hardware inventory to the rejected-approaches list</summary>
+
+| | |
+|---|---|
+| [0. CURRENT STATE](#0-current-state--2026-10-06-supersedes-older-sections-where-they-conflict) | [11. Performance Tuning Summary](#11-performance-tuning-summary) |
+| [1. Hardware Inventory](#1-hardware-inventory) | [12. Rejected Approaches](#12-rejected-approaches--do-not-retry-without-new-evidence) |
+| [2. OpenCore Configuration (current, verified)](#2-opencore-configuration-current-verified) | [13. File Locations](#13-file-locations) |
+| [3. Reverse-Engineered ACPI-WMI Interface](#3-reverse-engineered-acpi-wmi-interface) | [14. Version State (historical)](#14-version-state-historical-2026-09-02--current-versions-are-in-0) |
+| [4. Fan Control](#4-fan-control) | [15. Tools Used](#15-tools-used) |
+| [5. Keyboard RGB](#5-keyboard-rgb) | [16. Sleep](#16-sleep--instant-wake-from-usb-unresolved-by-design) |
+| [6. CPU Power Profiles](#6-cpu-power-profiles) | [17a. Verification Snapshot](#17a-verification-snapshot--2026-09-02-historical) |
+| [7. PredatorSense Port](#7-predatorsense-port--software-architecture) | [18. Guidance For Whoever Continues This](#18-guidance-for-whoever-continues-this) |
+| [8. Audio](#8-audio--alc289) | [6.9 PL1 hidden cap](#69-pl1-hidden-cap--final-closed-2026-10-02-do-not-retry) |
+| [9. Trackpad](#9-trackpad--polling-is-correct) | [17b. Changes 2026-10-02](#17b-changes-2026-10-02) |
+| [10. Display](#10-display) | [19. Display](#19-display--native-edid-name-14412090-hz-2026-10-06-verified) |
+
+</details>
+
 ## 0. CURRENT STATE — 2026-10-06 (supersedes older sections where they conflict)
 
 **Everything below this section is history plus detail. Where it disagrees with this section, this section wins.**

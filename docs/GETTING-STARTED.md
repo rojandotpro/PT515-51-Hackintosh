@@ -4,6 +4,10 @@ This is the practical, end-to-end walkthrough. For *why* each setting exists, th
 behind it, and the things that must not be changed, read
 [`BUILD-REFERENCE.md`](BUILD-REFERENCE.md).
 
+If you have never done this before, read [`HACKINTOSH-101.md`](HACKINTOSH-101.md) first — it
+explains the boot chain, kexts, ACPI and SMBIOS in plain language. Once the machine is running,
+[`STABILITY.md`](STABILITY.md) is the upkeep manual.
+
 The target is an **Acer Predator Triton 500 PT515-51** with the i7-8750H / UHD 630 / ALC289 /
 Intel CNVi combination. If your machine differs, expect to change patches.
 
@@ -292,3 +296,6 @@ If you only want the short version:
 5. Copy the EFI to the internal ESP.
 6. `sudo ./psec2/build.sh`.
 7. Re-apply the Wi-Fi root patch after every macOS update.
+
+When it boots, take a snapshot with `sudo ./tools/backup-efi.sh`, then read
+[`STABILITY.md`](STABILITY.md) so the next update does not undo the work.
