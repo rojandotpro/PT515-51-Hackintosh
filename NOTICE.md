@@ -4,6 +4,10 @@ This repository redistributes **unmodified release binaries** of several open-so
 that the build is reproducible. They are not covered by this repository's MIT licence (see
 [LICENSE](LICENSE)); each remains under its own licence, held by its authors.
 
+The MIT licence applies to the original code and documentation here: the PredatorSense stack under
+`psec2/`, the AppleALC layout modifications under `audio/`, the scripts under `tools/`, and the
+documentation under `docs/`. Apple's macOS is not distributed in this repository.
+
 If you are an author and want a component removed or re-attributed, open an issue.
 
 ## Bootloader

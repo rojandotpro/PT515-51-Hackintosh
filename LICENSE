@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This licence covers the original code and documentation in this repository:
-the PredatorSense stack under psec2/, the AppleALC layout modifications under
-audio/, the scripts under tools/, and the documentation under docs/.
-
-It does NOT cover the third-party components redistributed here — OpenCore,
-the Acidanthera kexts, VoodooI2C, VoodooPS2, OpenIntelWireless, USBToolBox and
-the rest. Those remain under their own licences; see NOTICE.md and the
-upstream repositories. Apple's macOS is not distributed here and never will be.
