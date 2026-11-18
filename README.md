@@ -3,6 +3,7 @@
 ![macOS](https://img.shields.io/badge/macOS-26.7.2%20Tahoe-000000?logo=apple&logoColor=white)
 ![OpenCore](https://img.shields.io/badge/OpenCore-1.0.8-4B8BBE)
 ![status](https://img.shields.io/badge/status-working%20daily%20driver-brightgreen)
+![release](https://img.shields.io/github/v/release/rojandotpro/PT515-51-Hackintosh?label=release)
 ![licence](https://img.shields.io/badge/licence-MIT-blue)
 
 A complete, working macOS Tahoe build for the **Acer Predator Triton 500 PT515-51**, plus a
@@ -193,7 +194,7 @@ reference/               Handovers, optimisation review, known-good manifest
 | [`docs/START-HERE.md`](docs/START-HERE.md) | Choose your path, 60-second summary |
 | [`docs/HACKINTOSH-101.md`](docs/HACKINTOSH-101.md) | The mental model: boot chain, kexts, ACPI, SMBIOS, SIP, glossary |
 | [`docs/GETTING-STARTED.md`](docs/GETTING-STARTED.md) | Build it from zero, step by step |
-| [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md) | **Custom PredatorSense tutorial** — build a hardware-control app for any laptop |
+| [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md) | **Custom PredatorSense app tutorial** — build a hardware-control app for any laptop |
 | [`docs/STABILITY.md`](docs/STABILITY.md) | Backups, update playbook, monitoring, recovery |
 | [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) | Symptom → cause → fix |
 | [`docs/BUILD-REFERENCE.md`](docs/BUILD-REFERENCE.md) | Every measurement, reverse-engineered interface and rejected approach |
