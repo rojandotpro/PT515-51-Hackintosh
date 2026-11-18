@@ -15,7 +15,7 @@ Tested configuration
 
 Compatibility is per model and per firmware revision. The method can be ported to another laptop
 that exposes a usable control path; these binaries cannot. No other model has been tested. See
-BUILD-YOUR-OWN-APP.md section 1.1 before assuming support.
+docs/BUILD-YOUR-OWN-APP.md section 1.1 before assuming support.
 
 Contents
 --------
@@ -23,12 +23,18 @@ Contents
   predatorsensed                       root daemon
   PredatorSenseEC.kext                 kernel driver (OpenCore kext)
   local.predatorsense.daemon.plist     LaunchDaemon definition
-  INSTALL.md                           driver design and bring-up order
-  PREDATORSENSE.md                     command protocol and safety model
-  SIGNING.md                           ad-hoc signing, Gatekeeper, verification
-  BUILD-YOUR-OWN-APP.md                tutorial: build this for another laptop
   LICENSE                              MIT, for the original code and docs
   NOTICE.md                            third-party components and their licences
+
+  docs/PREDATORSENSE.md                command protocol and safety model
+  docs/SIGNING.md                      ad-hoc signing, Gatekeeper, verification
+  docs/BUILD-YOUR-OWN-APP.md           tutorial: build this for another laptop
+  docs/BUILD-REFERENCE.md              every measured value and dead end
+  docs/AI-ATTRIBUTION.md               assistants used, authorship, licensing
+  docs/NETWORK.md                      Wi-Fi and Bluetooth notes
+
+  predatorsense/                       full source: kext, daemon, app, build.sh
+  predatorsense/INSTALL.md             driver design and bring-up order
 
 Verified installation
 ---------------------
@@ -74,15 +80,15 @@ If Gatekeeper blocks it after you have verified the checksums, removing quaranti
 
        xattr -dr com.apple.quarantine /Applications/PredatorSense.app
 
-See SIGNING.md for verification commands, why there is no Developer ID, and how to sign your own
-build if you have one.
+See docs/SIGNING.md for verification commands, why there is no Developer ID, and how to sign your
+own build if you have one.
 
 Safety
 ------
 This software writes to firmware interfaces that Acer never documented. It is written to fail safe:
 the kernel clamps duty, enforces a thermal ceiling, and hands the fans back to the EC when the
-daemon disconnects or the watchdog expires. Read INSTALL.md before you start, test upward (90 %
-before 50 %), and keep a bootable USB containing the EFI.
+daemon disconnects or the watchdog expires. Read predatorsense/INSTALL.md before you start, test
+upward (90 % before 50 %), and keep a bootable USB containing the EFI.
 
 Uninstall
 ---------
