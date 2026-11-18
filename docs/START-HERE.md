@@ -56,7 +56,7 @@ flowchart LR
 | [`audio/`](../audio/) | Custom AppleALC ALC289 layout 23: EQ, gain, limiter, mic boost, mute fix, reproducible patch |
 | [`display/`](../display/) | Native EDID with 144/120/90 Hz, banding tests, panel audits, generator |
 | [`docs/`](.) | Everything you are reading |
-| [`tools/`](../tools/) | Health check, audit collector, backup script, Linux capture scripts |
+| [`tools/`](../tools/) | Health check, audit collector, EFI backup, release packaging and verification, Linux capture scripts |
 | [`linux-evidence/`](../linux-evidence/) | Linux cross-check evidence used to settle hardware questions |
 | [`reference/`](../reference/) | Historical handovers, the optimisation review, the known-good manifest |
 

@@ -66,6 +66,11 @@ cd PT515-51-Hackintosh
 Swift and clang builds are not bit-for-bit reproducible, so compare behaviour and source, not hashes.
 Reading the ~1,500 lines of the stack is realistic; that is the strongest verification available.
 
+The published archives are exactly what `tools/package-release.sh` produces: it builds the stack,
+stages the package, rewrites links that point outside the archive to this repository, zips both
+trees, writes `SHA256SUMS.txt` and runs the verifier. Run it yourself and compare contents, not
+checksums — ZIP timestamps differ between runs.
+
 ---
 
 ## Gatekeeper and first launch

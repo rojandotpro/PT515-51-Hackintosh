@@ -194,7 +194,7 @@ predatorsense/           PredatorSense replacement: kext + daemon + app + build 
   build.sh               Builds and installs all three
 audio/                   Custom AppleALC ALC289 layout 23 (EQ, gain, limiter, mute fix)
 display/                 90 Hz EDID work, banding tests, panel audits, restore scripts
-tools/                   Health check, EFI backup, audit collectors, Linux dumps, PL1 test
+tools/                   Health check, EFI backup, release packaging/verification, audit collectors, PL1 test
 linux-evidence/          Linux cross-check evidence (USB report, EDID decode)
 docs/                    Guides and the full technical reference (see below)
 reference/               Handovers, optimisation review, known-good manifest
