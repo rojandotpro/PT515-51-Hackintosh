@@ -6,7 +6,7 @@
 .fseventsd
 
 # Build output
-psec2/build/
+predatorsense/build/
 audio/out/
 audio/work/
 audio/build.log

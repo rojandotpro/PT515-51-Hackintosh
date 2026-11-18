@@ -60,7 +60,7 @@ the release page itself was altered. For a higher level of assurance, build from
 ```sh
 git clone https://github.com/rojandotpro/PT515-51-Hackintosh.git
 cd PT515-51-Hackintosh
-./psec2/build.sh
+./predatorsense/build.sh
 ```
 
 Swift and clang builds are not bit-for-bit reproducible, so compare behaviour and source, not hashes.

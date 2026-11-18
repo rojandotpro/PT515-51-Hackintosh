@@ -2,6 +2,9 @@
 
 Updated: 2026-11-18. Supersedes `Handover-PT515-51-Hackintosh.md` (2026-10-10).
 
+> **Path note (2026-11-18):** this is a historical record, written when the project folder was
+> called `psec2/`. Paths below have been updated to today's `predatorsense/`; nothing else changed.
+
 ## 1. System
 - Acer Predator Triton 500 PT515-51, i7-8750H, UHD 630
 - macOS Tahoe 26.7 (25G229), updated to 26.7.1
@@ -15,14 +18,14 @@ Updated: 2026-11-18. Supersedes `Handover-PT515-51-Hackintosh.md` (2026-10-10).
 - No open bugs at the time of writing.
 
 ## 3. Project layout (Mac)
-Root: `/Volumes/Multimedia/Hackintosh/Final/psec2`
+Root: `/Volumes/Multimedia/Hackintosh/Final/predatorsense`
 - `kext/PredatorSenseEC/` (PredatorSenseEC.cpp/.hpp, PSECShared.h, PSECUserClient.cpp, Info.plist, kmod_info.cpp)
 - `daemon/` (main.swift, PSECBridge.swift, local.predatorsense.daemon.plist)
 - `app/PredatorSense/` (PredatorSenseApp.swift, PSECClient.swift, Info.plist, icons)
 - `build.sh`, `INSTALL.md`, `build/`, backups `.bak-1002`, `.bak-1008` (unmodified originals)
 
 Build and install:
-- Build: `sudo /Volumes/Multimedia/Hackintosh/Final/psec2/build.sh`
+- Build: `sudo /Volumes/Multimedia/Hackintosh/Final/predatorsense/build.sh`
 - Kext goes to `/Volumes/EFI/EFI/OC/Kexts/PredatorSenseEC.kext` (mount EFI with `sudo diskutil mount disk0s1`)
 - Daemon: `/usr/local/libexec/predatorsensed`, plist `local.predatorsense.daemon`, socket `/var/run/predatorsense.sock` (test: `echo "cmd" | nc -U /var/run/predatorsense.sock`), state `/Library/Application Support/PredatorSense/state.json`
 - App: `/Applications/PredatorSense.app` (SwiftUI MenuBarExtra, LSUIElement, id `local.predatorsense.app`). Tahoe install fix: `ditto --norsrc --noextattr`, `xattr -cr`, `codesign --force --deep --sign -`.
@@ -63,4 +66,4 @@ Goal was a Turbo toggle, a PredatorSense key that opens/closes the app, an Airpl
 ## 8. Optional pending
 - Record the exact Wi-Fi fix steps from the user's ChatGPT session (section 6).
 - Update the build doc (§0, §19) for the brightness changes, key findings and Wi-Fi fix.
-- Declined by user: deleting old backups (`EFI-Kexts-backup-1003-0038`, `display-audit-*`, `_archive-stale-display`, `panel-audit`, `ChatGPT-Codex-artifacts`, `psec2/.bak-1002`, old tarballs) and unused kexts/tools in the EFI.
+- Declined by user: deleting old backups (`EFI-Kexts-backup-1003-0038`, `display-audit-*`, `_archive-stale-display`, `panel-audit`, `ChatGPT-Codex-artifacts`, `predatorsense/.bak-1002`, old tarballs) and unused kexts/tools in the EFI.

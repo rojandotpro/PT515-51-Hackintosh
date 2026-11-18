@@ -84,7 +84,7 @@ copyright or trademark questions for your jurisdiction.
 ### The MIT licence applies to the published work
 
 [`LICENSE`](../LICENSE) applies to the original code and documentation in this repository: the
-PredatorSense stack under `psec2/`, the AppleALC layout modifications under `audio/`, the scripts
+PredatorSense stack under `predatorsense/`, the AppleALC layout modifications under `audio/`, the scripts
 under `tools/`, and the documents under `docs/`.
 
 That includes the human contributions of selection, structure, editing, testing and correction, and

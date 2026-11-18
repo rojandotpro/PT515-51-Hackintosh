@@ -109,9 +109,9 @@ another laptop or a completely different device.
 
 | Part | What it is |
 |---|---|
-| [`psec2/kext/`](psec2/kext/) | `PredatorSenseEC.kext` — IOKit driver for the Acer ACPI-WMI mapper, EC and MSRs |
-| [`psec2/daemon/`](psec2/daemon/) | Root daemon — owns the hardware, persists state, watchdog, thermal ceiling |
-| [`psec2/app/`](psec2/app/) | SwiftUI menu-bar app — fans, power profiles, RGB, keyboard backlight |
+| [`predatorsense/kext/`](predatorsense/kext/) | `PredatorSenseEC.kext` — IOKit driver for the Acer ACPI-WMI mapper, EC and MSRs |
+| [`predatorsense/daemon/`](predatorsense/daemon/) | Root daemon — owns the hardware, persists state, watchdog, thermal ceiling |
+| [`predatorsense/app/`](predatorsense/app/) | SwiftUI menu-bar app — fans, power profiles, RGB, keyboard backlight |
 
 **The tutorial is [`docs/BUILD-YOUR-OWN-APP.md`](docs/BUILD-YOUR-OWN-APP.md).** It covers finding
 the control path, decoding the ACPI-WMI interface, probing safely, writing the driver, designing a
@@ -164,7 +164,7 @@ You need a working macOS install to prepare the USB. Read
 5. Boot the USB, install macOS, then copy the EFI to the internal disk's ESP.
 6. Build and install the PredatorSense stack:
    ```sh
-   sudo ./psec2/build.sh
+   sudo ./predatorsense/build.sh
    ```
    See [`docs/PREDATORSENSE.md`](docs/PREDATORSENSE.md).
 
@@ -187,7 +187,7 @@ efi/                     Live OpenCore EFI (sanitized config, full kext set, ACP
   OC/Tools/              OpenCore shell tools
   OC/Resources/          Picker audio/icons
   BOOT/BOOTx64.efi
-psec2/                   PredatorSense replacement: kext + daemon + app + build script
+predatorsense/           PredatorSense replacement: kext + daemon + app + build script
   kext/PredatorSenseEC/  IOKit driver: WMI + EC access
   daemon/                Root daemon: socket, state, watchdog, backlight idle
   app/PredatorSense/     SwiftUI menu-bar app
@@ -195,7 +195,7 @@ psec2/                   PredatorSense replacement: kext + daemon + app + build 
 audio/                   Custom AppleALC ALC289 layout 23 (EQ, gain, limiter, mute fix)
 display/                 90 Hz EDID work, banding tests, panel audits, restore scripts
 tools/                   Health check, EFI backup, audit collectors, Linux dumps, PL1 test
-linux/                   Linux cross-check evidence (USB report, EDID decode)
+linux-evidence/          Linux cross-check evidence (USB report, EDID decode)
 docs/                    Guides and the full technical reference (see below)
 reference/               Handovers, optimisation review, known-good manifest
 ```

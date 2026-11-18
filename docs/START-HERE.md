@@ -52,12 +52,12 @@ flowchart LR
 | Folder | Contents |
 |---|---|
 | [`efi/`](../efi/) | The live OpenCore EFI: config, 25 kexts, 7 SSDTs, drivers, resources |
-| [`psec2/`](../psec2/) | PredatorSense replacement: kext sources, root daemon, SwiftUI menu-bar app, build script |
+| [`predatorsense/`](../predatorsense/) | PredatorSense replacement: kext sources, root daemon, SwiftUI menu-bar app, build script |
 | [`audio/`](../audio/) | Custom AppleALC ALC289 layout 23: EQ, gain, limiter, mic boost, mute fix, reproducible patch |
 | [`display/`](../display/) | Native EDID with 144/120/90 Hz, banding tests, panel audits, generator |
 | [`docs/`](.) | Everything you are reading |
 | [`tools/`](../tools/) | Health check, audit collector, backup script, Linux capture scripts |
-| [`linux/`](../linux/) | Linux cross-check evidence used to settle hardware questions |
+| [`linux-evidence/`](../linux-evidence/) | Linux cross-check evidence used to settle hardware questions |
 | [`reference/`](../reference/) | Historical handovers, the optimisation review, the known-good manifest |
 
 ---

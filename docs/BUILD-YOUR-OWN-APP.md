@@ -191,7 +191,7 @@ one exposed `WMBH`. That is why the driver enumerates every match and calls
 `validateObject("WMBH")` instead of taking the first one:
 
 ```cpp
-// psec2/kext/PredatorSenseEC/PredatorSenseEC.cpp — excerpt
+// predatorsense/kext/PredatorSenseEC/PredatorSenseEC.cpp — excerpt
 OSDictionary *match = IOService::nameMatching("PNP0C14");
 OSIterator *it = IOService::getMatchingServices(match);
 while (IOACPIPlatformDevice *dev = ...) {
@@ -706,12 +706,12 @@ Everything above is implemented here. Read in this order:
 
 | File | What it shows |
 |---|---|
-| [`psec2/kext/PredatorSenseEC/PredatorSenseEC.cpp`](../psec2/kext/PredatorSenseEC/PredatorSenseEC.cpp) | Device matching, `WMBH` calls, fan/EC logic |
-| [`psec2/kext/PredatorSenseEC/PSECShared.h`](../psec2/kext/PredatorSenseEC/PSECShared.h) | The kernel↔daemon ABI and the padding rule |
-| [`psec2/kext/PredatorSenseEC/PSECUserClient.cpp`](../psec2/kext/PredatorSenseEC/PSECUserClient.cpp) | Dispatch table and method handlers |
-| [`psec2/daemon/main.swift`](../psec2/daemon/main.swift) | Socket server, state persistence, watchdog, backlight idle |
-| [`psec2/app/PredatorSense/PredatorSenseApp.swift`](../psec2/app/PredatorSense/PredatorSenseApp.swift) | `MenuBarExtra` UI |
-| [`psec2/app/PredatorSense/PSECClient.swift`](../psec2/app/PredatorSense/PSECClient.swift) | Socket client off the main thread |
+| [`predatorsense/kext/PredatorSenseEC/PredatorSenseEC.cpp`](../predatorsense/kext/PredatorSenseEC/PredatorSenseEC.cpp) | Device matching, `WMBH` calls, fan/EC logic |
+| [`predatorsense/kext/PredatorSenseEC/PSECShared.h`](../predatorsense/kext/PredatorSenseEC/PSECShared.h) | The kernel↔daemon ABI and the padding rule |
+| [`predatorsense/kext/PredatorSenseEC/PSECUserClient.cpp`](../predatorsense/kext/PredatorSenseEC/PSECUserClient.cpp) | Dispatch table and method handlers |
+| [`predatorsense/daemon/main.swift`](../predatorsense/daemon/main.swift) | Socket server, state persistence, watchdog, backlight idle |
+| [`predatorsense/app/PredatorSense/PredatorSenseApp.swift`](../predatorsense/app/PredatorSense/PredatorSenseApp.swift) | `MenuBarExtra` UI |
+| [`predatorsense/app/PredatorSense/PSECClient.swift`](../predatorsense/app/PredatorSense/PSECClient.swift) | Socket client off the main thread |
 | [`docs/BUILD-REFERENCE.md`](BUILD-REFERENCE.md) | Every measured value and every dead end |
 | [`docs/PREDATORSENSE.md`](PREDATORSENSE.md) | The command protocol and safety model |
 

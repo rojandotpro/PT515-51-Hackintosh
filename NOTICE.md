@@ -5,7 +5,7 @@ that the build is reproducible. They are not covered by this repository's MIT li
 [LICENSE](LICENSE)); each remains under its own licence, held by its authors.
 
 The MIT licence applies to the original code and documentation here: the PredatorSense stack under
-`psec2/`, the AppleALC layout modifications under `audio/`, the scripts under `tools/`, and the
+`predatorsense/`, the AppleALC layout modifications under `audio/`, the scripts under `tools/`, and the
 documentation under `docs/`. Apple's macOS is not distributed in this repository.
 
 If you are an author and want a component removed or re-attributed, open an issue.
@@ -36,7 +36,7 @@ If you are an author and want a component removed or re-attributed, open an issu
 | AMFIPass | https://github.com/dhinakg/AMFIPass |
 | LucyRTL8125Ethernet | https://github.com/Mieze/LucyRTL8125Ethernet |
 | IOSkywalkFamily, IO80211FamilyLegacy | OpenCore Legacy Patcher / Dortania projects |
-| PredatorSenseEC | **this repository** — see `psec2/` |
+| PredatorSenseEC | **this repository** — see `predatorsense/` |
 
 > **AppleALC** is the one binary here that is **not** stock: it is a local build from the upstream
 > source with this machine's layout 23 modifications. The complete patch is in

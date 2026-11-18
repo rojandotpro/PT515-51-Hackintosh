@@ -29,12 +29,12 @@ restored at boot, so you never need to open the app.
 Requires only Xcode Command Line Tools.
 
 ```sh
-cd psec2
+cd predatorsense
 chmod +x build.sh
 ./build.sh
 ```
 
-Output is in `psec2/build/`:
+Output is in `predatorsense/build/`:
 
 ```
 PredatorSenseEC.kext
@@ -52,20 +52,20 @@ everything. No MacKernelSDK checkout is needed, but the SDK must ship `Kernel.fr
 ```sh
 # 1. Kext into the EFI
 sudo diskutil mount disk0s1
-sudo cp -R psec2/build/PredatorSenseEC.kext /Volumes/EFI/EFI/OC/Kexts/
+sudo cp -R predatorsense/build/PredatorSenseEC.kext /Volumes/EFI/EFI/OC/Kexts/
 # It is already enabled in config.plist. Reboot.
 
 # 2. Daemon
-sudo cp psec2/build/predatorsensed /usr/local/libexec/
+sudo cp predatorsense/build/predatorsensed /usr/local/libexec/
 sudo chown root:wheel /usr/local/libexec/predatorsensed
 sudo chmod 755 /usr/local/libexec/predatorsensed
-sudo cp psec2/daemon/local.predatorsense.daemon.plist /Library/LaunchDaemons/
+sudo cp predatorsense/daemon/local.predatorsense.daemon.plist /Library/LaunchDaemons/
 sudo chown root:wheel /Library/LaunchDaemons/local.predatorsense.daemon.plist
 sudo launchctl bootstrap system /Library/LaunchDaemons/local.predatorsense.daemon.plist
 
 # 3. App
 sudo rm -rf /Applications/PredatorSense.app
-sudo ditto --norsrc --noextattr psec2/build/PredatorSense.app /Applications/PredatorSense.app
+sudo ditto --norsrc --noextattr predatorsense/build/PredatorSense.app /Applications/PredatorSense.app
 sudo xattr -cr /Applications/PredatorSense.app
 sudo codesign --force --deep --sign - /Applications/PredatorSense.app
 ```

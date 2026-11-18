@@ -44,7 +44,7 @@ are at a desktop and your boot is unaffected.
 ## Build
 
 ```bash
-cd psec2 && chmod +x build.sh && ./build.sh
+cd predatorsense && chmod +x build.sh && ./build.sh
 ```
 
 ## Install

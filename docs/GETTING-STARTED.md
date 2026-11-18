@@ -211,7 +211,7 @@ pmset -g
 The stack is already in the EFI as `PredatorSenseEC.kext`. Build and install the daemon and app:
 
 ```sh
-cd psec2
+cd predatorsense
 sudo ./build.sh
 ```
 
@@ -294,7 +294,7 @@ If you only want the short version:
 3. Replace the four SMBIOS placeholders with your own.
 4. Install Tahoe.
 5. Copy the EFI to the internal ESP.
-6. `sudo ./psec2/build.sh`.
+6. `sudo ./predatorsense/build.sh`.
 7. Re-apply the Wi-Fi root patch after every macOS update.
 
 When it boots, take a snapshot with `sudo ./tools/backup-efi.sh`, then read

@@ -1280,7 +1280,7 @@ Linux (CachyOS live, `iomem=relaxed`) test with `Final/pl1-uncap-test.py`:
 
 ## 17b. Changes 2026-10-02
 
-- PredatorSense review fixes: tolerant settings decode (old state.json no longer wiped), brightness restored before kb commands while dimmed, app slider re-seed (no 25 % lock-in when opened dimmed), Turbo restores prior fan/power state, PL2 cap no longer rolls Turbo back or greys the power picker, clamped CLI ints (no daemon crash on negatives), daemon ProcessType Standard. Old sources: `psec2/.bak-1002/`.
+- PredatorSense review fixes: tolerant settings decode (old state.json no longer wiped), brightness restored before kb commands while dimmed, app slider re-seed (no 25 % lock-in when opened dimmed), Turbo restores prior fan/power state, PL2 cap no longer rolls Turbo back or greys the power picker, clamped CLI ints (no daemon crash on negatives), daemon ProcessType Standard. Old sources: `predatorsense/.bak-1002/`.
 - Battery charge-limit (WMBE methods 20/21 exist in firmware MOF) was prototyped then removed at user request — available if ever wanted.
 - **App install on Tahoe:** copying from the Multimedia drive drags `._` files into the bundle and breaks the signature ("not compatible"). Install with:
   `sudo ditto --norsrc --noextattr build/PredatorSense.app /Applications/PredatorSense.app && sudo xattr -cr /Applications/PredatorSense.app && sudo codesign --force --deep --sign - /Applications/PredatorSense.app`
