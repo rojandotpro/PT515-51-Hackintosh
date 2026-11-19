@@ -114,5 +114,6 @@ active USB map.
 ## Verdict
 
 **Status: working daily driver.** Every enabled item above was verified live on 2026-11-18.
-Known open items: Bluetooth controller state, instant wake from USB with the lid open, UI gradient
+Known open items: Bluetooth controller state (the radio can fail to enumerate; a cold boot with a
+20 s power-button hold recovers it), instant wake from USB with the lid open, UI gradient
 banding.

@@ -30,7 +30,11 @@ echo
 
 echo "== USB radio (Intel 8087:0aaa, internal port HS06) =="
 USB="$(ioreg -p IOUSB -l -w0 2>/dev/null)"
-if printf '%s\n' "$USB" | grep -qE '"idVendor"=32903.*"idProduct"=2730|"idProduct"=2730.*"idVendor"=32903'; then
+LOADED="$(kmutil showloaded --list-only 2>/dev/null)"
+# The controller exposes idProduct 2730 and UsbDeviceSignature <8780aa0a...>
+# rather than an idVendor property, so check the signature and the name too.
+if printf '%s\n' "$USB" | grep -qE 'UsbDeviceSignature" = <8780aa0a|Bluetooth USB Host Controller|"idProduct" = 2730' \
+   || printf '%s\n' "$LOADED" | grep -q com.zxystd.IntelBluetoothFirmware; then
   RADIO=1
   grn "  present"
 else
@@ -42,7 +46,6 @@ fi
 echo
 
 echo "== driver stack =="
-LOADED="$(kmutil showloaded --list-only 2>/dev/null)"
 for id in com.zxystd.IntelBluetoothFirmware com.zxystd.IntelBTPatcher as.acidanthera.BlueToolFixup; do
   if printf '%s\n' "$LOADED" | grep -q "$id"; then
     printf '  loaded    %s\n' "$id"

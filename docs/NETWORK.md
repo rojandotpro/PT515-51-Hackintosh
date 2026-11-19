@@ -104,6 +104,12 @@ radio on port 014 (`lsusb`: `8087:0aaa`), so the port map is correct.
 `BCM_4350C2` is a placeholder, not the real chip: it is what macOS reports when no Bluetooth USB
 device is attached.
 
+**Confirmed recovery (2026-11-19):** after a full shutdown, unplugging the charger and USB devices,
+and holding the power button for 20 seconds, the radio returned as `Bluetooth USB Host Controller`
+on `HS06`, `IntelBluetoothFirmware` loaded, and the controller came up as `THIRD_PARTY_DONGLE` with
+a real address. A paired speaker worked. The cold boot is the recovery step; it is not a permanent
+fix, so the failure can return after a future power event.
+
 Pairing works when the controller comes up; after sleep it can disappear until toggled.
 
 ### If the radio is absent
