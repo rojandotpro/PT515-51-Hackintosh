@@ -65,7 +65,7 @@ system_profiler SPDisplaysDataType | head -20
 ```
 
 Expect `Chipset Model: Intel UHD Graphics 630`, `Metal: Supported, feature set Metal 3`, and
-`VRAM (Dynamic, Max): 1536 MB`. If Metal is missing:
+`VRAM (Dynamic, Max): 2048 MB` (reported via `framebuffer-unifiedmem`; the stock value is 1536 MB and is also normal). If Metal is missing:
 
 - check `device-id` = `3E9B` and `AAPL,ig-platform-id` under `PciRoot(0x0)/Pci(0x2,0x0)`;
 - check WhateverGreen is loaded (`kmutil showloaded | grep WhateverGreen`);

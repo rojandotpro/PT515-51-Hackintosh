@@ -98,7 +98,9 @@ active USB map.
 ## DeviceProperties — `PciRoot(0x0)/Pci(0x2,0x0)`
 
 `AAPL,ig-platform-id`, `device-id 3E9B`, `framebuffer-patch-enable`,
-`framebuffer-stolenmem`, `enable-backlight-registers-fix`, `AAPL00,Dither`, and the custom
+`framebuffer-stolenmem` (19 MB), `framebuffer-fbmem` (9 MB),
+`framebuffer-unifiedmem` (2048 MB — reported VRAM only, tested working 2026-11-19),
+`enable-backlight-registers-fix`, `AAPL00,Dither`, and the custom
 `AAPL00,override-no-connect` EDID (144/90/120 Hz, name `Triton 500`).
 
 ## Power and battery

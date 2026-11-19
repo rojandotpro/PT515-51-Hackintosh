@@ -250,7 +250,9 @@ entries removed. **No trackpad or wake SSDT is used on this machine** — see §
 | `AAPL,ig-platform-id` | `0900A53E` (0x3EA50009) | CFL mobile UHD 630 |
 | `device-id` | `9B3E0000` (0x3E9B) | |
 | `framebuffer-patch-enable` | `01000000` | |
-| `framebuffer-stolenmem` | `00003001` (0x01300000, 19 MB) | |
+| `framebuffer-stolenmem` | `00003001` (0x01300000, 19 MB) | scanout allocation; not a performance knob |
+| `framebuffer-fbmem` | `00009000` (0x00900000, 9 MB) | framebuffer memory; paired with unifiedmem |
+| `framebuffer-unifiedmem` | `00000080` (0x80000000, 2048 MB) | **reported** VRAM only — see §12 note below |
 | `enable-backlight-registers-fix` | `01000000` | KBL/CFL/ICL backlight fix |
 | ~~`rps-control`~~ | *removed* | tried and reverted — raised package temps (shared 45 W budget with the CPU) for no measured benefit |
 | `AAPL00,override-no-connect` | see §10 | custom EDID: 120 Hz DTD added; bit depth left **native 8-bit** (§10.2.1) |
@@ -1088,7 +1090,8 @@ via `SMCBatteryManager`; not a hackintosh misreport.
 | **USB sleep-power properties** | `kUSBSleepPowerSupply`/`kUSBSleepPortCurrentLimit` etc. on `PciRoot(0x0)/Pci(0x14,0x0)`. Applied, **failed** — did not stop the drive dropping or the wakes. Reverted. |
 | **Modded/unlocked Insyde BIOS** | Nothing worth having behind it: CFG Lock quirk already works, DVMT is not a perf lever, undervolting is Plundervolt-locked. 8th-gen Acer has Boot Guard and no flashback recovery — a failed flash is a dead mainboard. |
 | **Spoofing a different iGPU `device-id`** | Already native and correct. Spoofing is for *compatibility*, never performance — it cannot add EUs or clock. |
-| **"More VRAM" via `framebuffer-stolenmem` / BIOS DVMT** | Intel iGPUs allocate graphics memory dynamically from system RAM. `stolenmem` sizes display scanout buffers only. Reports `1536 MB` dynamic max. |
+| **"More VRAM" via `framebuffer-stolenmem` / BIOS DVMT** | Intel iGPUs allocate graphics memory dynamically from system RAM. `stolenmem` sizes display scanout buffers only and is **not** a performance knob. Raising it is still rejected. |
+| **`framebuffer-unifiedmem` (reported VRAM)** | **Tested 2026-11-19: works.** Added `framebuffer-fbmem 00009000` + `framebuffer-unifiedmem 00000080` (2048 MB); 1792 MB was tested first, then 2048 MB. Both booted clean on 26.7.3. DVMT is **64 MB** (measured from Linux `dmesg`: `Reserving Intel graphics memory at [mem 0x75800000-0x797fffff]`), and the BIOS exposes a 2048 MB aperture option. **This changes only the number reported to apps, not GPU throughput** — bandwidth stays ~43 GB/s and Metal performance is unchanged. Keep `stolenmem` at 19 MB; do not raise it. |
 | **EPP `0x00` (max-performance bias)** | **Tested twice on 2026-09-02. Verdict: no measurable effect — the earlier "−6.9 %" claim in this table was wrong and has been retracted.** Controlled comparison on the *correct* 4100 map: EPP `0x00` = **1359 / 5202**, EPP `0x80` = **1338 / 5236**. That is **0.7 % multi-core apart, inside run-to-run noise**, and single-core moved the *opposite* way. The original 5744 → 5345 slide was confounded: the 5345 run used the broken MacBookPro16,1 map (no 4100 key) *and* followed back-to-back benchmark runs with no thermal cooldown. Do not attribute it to EPP. **Keep EPP `0x80`** — not because it is faster, but because it is the known-good file and measured the best idle (~2.6 W). See §6.7 for the unexplained gap to the 5744 baseline. |
 | **CPUFriendFriend target model `MacBookPro16,1`** | **Wrong — see §6.6.** The target model must match the CPU's *frequency range*, not the SMBIOS. MacBookPro16,1 ships 9th-gen chips (4.5/4.8/5.0 GHz), producing a `Frequencies` map with **no 4100 entry** for this 4.1 GHz i7-8750H. Use **`MacBookPro15,1`**, which covers 4100-5000. |
 
@@ -1232,7 +1235,7 @@ OpenCore         REL-107-2026-03-20      current
 CPU              i7-8750H, 6P/12L        RAM 16 GB
 Memory           ChannelA-DIMM0 8 GB + ChannelB-DIMM0 8 GB, DDR4-2667   DUAL CHANNEL
 Storage          WDC PC SN720 512 GB, PCIe x4 @ 8.0 GT/s, TRIM Yes
-GPU              UHD 630, device-id 0x3e9b, Metal 3, 1536 MB dynamic
+GPU              UHD 630, device-id 0x3e9b, Metal 3, 2048 MB reported (unifiedmem patch)
 Display          1920x1080 @ 144 Hz (120 Hz mode also present via EDID)
 Audio            ALC289 (IOHDACodecVendorID 283902601), alc-layout-id 23, in+out 48000 Hz
 Network          en0 itlwm (Wi-Fi), en1 RTL8125 (1000baseT)
