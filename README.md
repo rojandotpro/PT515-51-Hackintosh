@@ -1,6 +1,6 @@
 # Acer Predator Triton 500 (PT515-51) — macOS Tahoe Hackintosh + Custom PredatorSense App
 
-![macOS](https://img.shields.io/badge/macOS-26.7.2%20Tahoe-000000?logo=apple&logoColor=white)
+![macOS](https://img.shields.io/badge/macOS-26.7.3%20Tahoe-000000?logo=apple&logoColor=white)
 ![OpenCore](https://img.shields.io/badge/OpenCore-1.0.8-4B8BBE)
 ![status](https://img.shields.io/badge/status-working%20daily%20driver-brightgreen)
 ![release](https://img.shields.io/github/v/release/rojandotpro/PT515-51-Hackintosh?label=release)
@@ -14,13 +14,14 @@ This repository is the full record: the EFI, every kext and patch, the custom ap
 for building your own, the custom AppleALC audio work, the display/EDID work, the Linux
 cross-checks, the dead ends, and the method used to get here with AI assistants.
 
-> **Status: working daily driver.** macOS Tahoe **26.7.2 (25G332)**, OpenCore 1.0.8, UHD 630
+> **Status: working daily driver.** macOS Tahoe **26.7.3 (25G342)**, OpenCore 1.0.8, UHD 630
 > acceleration, custom audio, Wi-Fi, battery, sleep, 144 Hz display, keyboard backlight,
-> fan/turbo/RGB control. Verified on 2026-11-18.
+> fan/turbo/RGB control. Verified on 2026-11-19.
 >
-> **Open items:** Bluetooth controller state is inconsistent on this unit (stack loads, address
-> sometimes `NULL`) — see [`docs/NETWORK.md`](docs/NETWORK.md#bluetooth). Instant wake from USB
-> with the lid open has a working workaround, not a fix — see
+> **Open items:** Bluetooth is inconsistent on this unit. The USB radio can fail to enumerate, in
+> which case no kext can load, and the controller can drop after sleep. Run
+> `tools/bluetooth-check.sh` and see [`docs/NETWORK.md`](docs/NETWORK.md#bluetooth). Instant wake
+> from USB with the lid open has a working workaround, not a fix — see
 > [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md#sleep-wakes-instantly-lid-open).
 
 ![PT515-51 running macOS Tahoe with the PredatorSense menu-bar app](assets/banner.png)
@@ -194,7 +195,7 @@ predatorsense/           PredatorSense replacement: kext + daemon + app + build 
   build.sh               Builds and installs all three
 audio/                   Custom AppleALC ALC289 layout 23 (EQ, gain, limiter, mute fix)
 display/                 90 Hz EDID work, banding tests, panel audits, restore scripts
-tools/                   Health check, EFI backup, release packaging/verification, audit collectors, PL1 test
+tools/                   Health check, Bluetooth diagnosis, EFI backup, release packaging/verification, PL1 test
 linux-evidence/          Linux cross-check evidence (USB report, EDID decode)
 docs/                    Guides and the full technical reference (see below)
 reference/               Handovers, optimisation review, known-good manifest

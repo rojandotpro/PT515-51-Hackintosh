@@ -102,8 +102,17 @@ Expected — the Intel Wi-Fi root patch is wiped by every macOS update. Follow
 
 ## Bluetooth missing or off
 
-See [`NETWORK.md`](NETWORK.md#bluetooth). Check `IntelBluetoothInjector` is **disabled** and that
-the firmware and patcher are both 2.5.1. This is an open item on the reference unit.
+Run `./tools/bluetooth-check.sh` first; it separates the two causes.
+
+- **Radio absent from USB** (firmware loader not loaded, controller shows `BCM_4350C2`, address
+  `NULL`, firmware `v0 c0`): cold boot — shut down, unplug power and USB, hold the power button
+  20 s. If it stays absent in Linux or Windows too, it is the module, its USB path or the EC.
+  NVRAM resets and macOS reinstalls do not help.
+- **Radio present, controller off**: toggle Bluetooth, then read
+  `log show --last 5m --predicate 'process == "bluetoothd"'`.
+
+Full detail and the port map: [`NETWORK.md`](NETWORK.md#bluetooth). This is an open item on the
+reference unit, not a solved feature.
 
 ## Sleep wakes instantly (lid open)
 

@@ -55,7 +55,7 @@ On a working Mac:
 
 ```sh
 # Download the current Tahoe installer (or use the App Store)
-softwareupdate --fetch-full-installer --full-installer-version 26.7.2
+softwareupdate --fetch-full-installer --full-installer-version 26.7.3
 
 # Erase the USB as GPT + HFS+ (or APFS) and name it MyUSB
 diskutil list

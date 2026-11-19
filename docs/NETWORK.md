@@ -69,25 +69,68 @@ with the firmware loader on Tahoe.
 
 `-ibtcompatbeta` is in `boot-args` for beta-build compatibility.
 
-### State on the reference unit
+### How the stack fits together
 
-The stack loads, but the controller state is **inconsistent** and was not fully resolved before
-publication:
+The Bluetooth half of the Intel 9560 is a **USB device** (`8087:0aaa`) on the internal XHCI port
+**HS06**. `IntelBluetoothFirmware.kext` cannot do anything until that device appears: its IOKit
+personality matches `IOUSBHostDevice` with `idVendor 0x8087` and `idProduct 0x0aaa`, so the kext is
+loaded only after enumeration. `IntelBTPatcher` and `BlueToolFixup` load without it.
 
-- macOS has reported Bluetooth **Off**, transport `THIRD_PARTY_DONGLE`, with the controller
-  address `NULL`.
-- Pairing works when the controller comes up; after sleep it can disappear until toggled.
+That ordering is the whole diagnosis. If `kmutil showloaded` lists the patcher and the fixup but
+**not** the firmware loader, the usual cause is not a kext problem — the radio is missing from the
+USB tree.
 
-This is documented as an **open item**, not as a solved feature. Diagnostic sequence:
+```sh
+./tools/bluetooth-check.sh
+```
+
+It prints the controller, the USB radio, the three kexts and a verdict with the next step.
+
+### State on the reference unit (2026-11-19)
+
+Bluetooth is an **open item**, and there are two distinct failure modes:
+
+| Symptom | Meaning |
+|---|---|
+| Radio present in `ioreg`, firmware loaded, controller Off with address `NULL` | Controller/firmware state — toggle Bluetooth, read `bluetoothd` logs |
+| Radio absent, firmware loader not loaded, controller reports `BCM_4350C2`, `NULL`, `v0 c0` | The USB device is not enumerating; nothing above the USB layer can help |
+
+The second mode was observed on 2026-11-19, after the 26.7.3 update and an NVRAM reset. No EFI or
+kext change was made in between and the same kexts still load, so treat it as an enumeration/EC
+event rather than a driver regression. `ioreg` showed internal port `HS06` present and empty, while
+the camera on `HS05` and a USB Ethernet adapter on `SS01` were fine. Linux had already reported the
+radio on port 014 (`lsusb`: `8087:0aaa`), so the port map is correct.
+
+`BCM_4350C2` is a placeholder, not the real chip: it is what macOS reports when no Bluetooth USB
+device is attached.
+
+Pairing works when the controller comes up; after sleep it can disappear until toggled.
+
+### If the radio is absent
+
+1. **Cold boot, not a restart.** Shut down, unplug the charger and every USB device, hold the power
+   button for 20 seconds, then boot. This resets the embedded controller, which owns power to the
+   CNVi module.
+2. Run `./tools/bluetooth-check.sh` again. Enumeration usually returns on the next boot.
+3. Still absent: check the BIOS wireless/Bluetooth setting and press `Fn+F3` twice (aeroplane-mode
+   toggle). Wi-Fi and Bluetooth share that switch.
+4. Boot Linux or Windows and check for `8087:0aaa`. If it is absent there too, the operating system
+   is not the cause — the CNVi module, its USB path or the EC is. Reseating the module is the next
+   physical step.
+5. Resetting NVRAM does not fix this and is not required. Neither does reinstalling macOS.
+
+Diagnostics, if you want the raw output:
 
 ```sh
 system_profiler SPBluetoothDataType | head -30
+kmutil showloaded --list-only | grep -iE 'IntelBluetooth|BlueTool'
+ioreg -p IOUSB -l -w0 | grep -E 'idVendor"=32903|0aaa'
 log show --last 5m --predicate 'process == "bluetoothd"'
-ioreg -l -w0 | grep -i -E 'IOBluetooth|BCM|IntelBT'
 ```
 
-Things that were already checked: kext load order, `IntelBluetoothInjector` disabled, matched
-2.5.1 firmware/patcher versions, USB device present in `ioreg` under the XHCI controller.
+Things already checked on this unit: kext load order, `IntelBluetoothInjector` disabled, matched
+2.5.1 firmware/patcher versions, the USB map includes `HS06` as an internal port, and the radio was
+present under Linux on that same port.
 
 ---
 

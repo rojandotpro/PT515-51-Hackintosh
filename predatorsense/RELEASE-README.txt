@@ -11,7 +11,7 @@ Tested configuration
 --------------------
   Laptop : Acer Predator Triton 500 PT515-51
   BIOS   : V1.13 (do not update)
-  OS     : macOS Tahoe 26.7.2 (25G332), x86_64, OpenCore 1.0.8
+  OS     : macOS Tahoe 26.7.2 (25G332); verified again on 26.7.3 (25G342), x86_64, OpenCore 1.0.8
 
 Compatibility is per model and per firmware revision. The method can be ported to another laptop
 that exposes a usable control path; these binaries cannot. No other model has been tested. See

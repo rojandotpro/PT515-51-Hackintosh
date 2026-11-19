@@ -10,7 +10,8 @@ continue work without rediscovering anything.
 **Reading order for a new session:** this section, then
 [§12 Rejected approaches](#12-rejected-approaches--do-not-retry-without-new-evidence).
 
-> **Live state at publication (2026-11-18):** macOS Tahoe **26.7.2 (25G332)**, OpenCore
+> **Live state (2026-11-19):** macOS Tahoe **26.7.3 (25G342)** (published on 26.7.2; the point
+> update required no EFI change), OpenCore
 > **1.0.8**, SMBIOS `MacBookPro16,1`. Kext versions in the live EFI: Lilu 1.7.3,
 > WhateverGreen 1.7.2, AppleALC 1.9.9, VirtualSMC 1.3.9, AirportItlwm 2.3.0,
 > IntelBluetoothFirmware 2.5.1, AMFIPass 1.4.1, PredatorSenseEC 3.7.0.

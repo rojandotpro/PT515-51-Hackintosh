@@ -77,7 +77,7 @@ way to find out whether your machine is compatible — and where.
 
 | Target | What transfers | What must be verified |
 |---|---|---|
-| **This exact model** — PT515-51, BIOS V1.13, macOS 26.7.2 | The whole stack, with the documented caveats | Nothing; this is the measured reference |
+| **This exact model** — PT515-51, BIOS V1.13, macOS 26.7.3 | The whole stack, with the documented caveats | Nothing; this is the measured reference |
 | Another PT515-51 with a different panel, Wi-Fi card or EC revision | Architecture and most patches | Device IDs, EDID, Wi-Fi, thermals |
 | Another Acer Predator using the same `AcerGamingFunction` WMI class | The kext skeleton and driver shape | Method IDs, argument widths, fan ordinals, zone map |
 | A different vendor (Dell, Lenovo, HP, MSI, ASUS) | The method and the three-layer architecture | The control path, the protocol, every value and limit |

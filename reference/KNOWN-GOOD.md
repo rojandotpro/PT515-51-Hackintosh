@@ -1,4 +1,4 @@
-# Known-good manifest — verified 2026-11-18
+# Known-good manifest — verified 2026-11-19
 
 The exact state of the reference machine at publication. If you are debugging, compare against
 this. If you make a verified change, update this file.
@@ -20,7 +20,7 @@ this. If you make a verified change, update this file.
 | Bluetooth | Intel 9460/9560 `[8087:0aaa]` |
 | Ethernet | Killer E3000 `[10ec:3000]` |
 | Trackpad | Elantech ELAN0504 on `I2C1.TPD0` |
-| macOS | **26.7.2 (25G332)** |
+| macOS | **26.7.3 (25G342)** |
 | OpenCore | **REL-108-2026-09-27** (1.0.8) |
 | SMBIOS | `MacBookPro16,1` |
 

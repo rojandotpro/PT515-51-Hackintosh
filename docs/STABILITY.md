@@ -167,6 +167,7 @@ system_profiler SPDisplaysDataType | head -15
 
 # 5. Everything else
 ./tools/pt515-healthcheck.sh
+./tools/bluetooth-check.sh || true
 ```
 
 | Check | Healthy result | If it fails |
@@ -174,8 +175,12 @@ system_profiler SPDisplaysDataType | head -15
 | Network | `en0` has an IPv4 address | re-apply the Intel Wi-Fi root patch — [`NETWORK.md`](NETWORK.md#the-part-that-breaks-after-updates) |
 | Audio | built-in output and input present | check `alcid=23`, re-patch AppleHDA — [`AUDIO.md`](AUDIO.md) |
 | Graphics | UHD 630, Metal 3, 144/120/90 Hz | check DeviceProperties and WhateverGreen — [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md) |
-| Bluetooth | controller present (may be off until toggled) | see [`NETWORK.md`](NETWORK.md#bluetooth) |
+| Bluetooth | radio present; controller may be off until toggled | `tools/bluetooth-check.sh`; if the radio is absent, cold boot — [`NETWORK.md`](NETWORK.md#bluetooth) |
 | PredatorSense | `echo status \| nc -U /var/run/predatorsense.sock` returns `"ok":true` | [`PREDATORSENSE.md`](PREDATORSENSE.md) |
+
+Bluetooth is the one check where a failed update can look like a driver problem but is not. The
+firmware kext loads only after the USB radio enumerates. If the check reports the radio absent, do
+a cold boot before touching the EFI: no kext or config change can create a missing USB device.
 
 ### Kext update policy
 

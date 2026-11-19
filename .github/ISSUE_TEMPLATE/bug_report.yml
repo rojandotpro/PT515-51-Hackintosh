@@ -15,7 +15,7 @@ body:
     id: macos
     attributes:
       label: macOS version and build
-      placeholder: "26.7.2 (25G332)"
+      placeholder: "26.7.3 (25G342)"
     validations:
       required: true
   - type: input

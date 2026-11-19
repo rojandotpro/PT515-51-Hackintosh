@@ -1,7 +1,7 @@
 # Start here
 
 This repository is the complete record of one working Hackintosh: an **Acer Predator Triton 500
-(PT515-51)** running **macOS Tahoe 26.7.2**, including the EFI, every patch, a replacement for
+(PT515-51)** running **macOS Tahoe 26.7.3**, including the EFI, every patch, a replacement for
 Acer's Windows-only PredatorSense software, custom audio, display work, and the measurements that
 made it all work.
 
@@ -39,7 +39,7 @@ flowchart LR
 | | |
 |---|---|
 | **Machine** | Acer Predator Triton 500, PT515-51, i7-8750H, UHD 630, ALC289, Intel CNVi |
-| **OS** | macOS Tahoe 26.7.2 (25G332) |
+| **OS** | macOS Tahoe 26.7.3 (25G342) |
 | **Bootloader** | OpenCore 1.0.8, SMBIOS `MacBookPro16,1` |
 | **Works** | graphics, audio, Wi-Fi, Ethernet, battery, sleep (with the USB caveat), trackpad, 144/120/90 Hz, keyboard backlight, fans, RGB, power profiles |
 | **Does not work** | the dead NVIDIA GPU (hardware), special media keys (firmware), AirDrop/Continuity (itlwm limitation), macOS 27 (Apple Silicon only) |
@@ -56,7 +56,7 @@ flowchart LR
 | [`audio/`](../audio/) | Custom AppleALC ALC289 layout 23: EQ, gain, limiter, mic boost, mute fix, reproducible patch |
 | [`display/`](../display/) | Native EDID with 144/120/90 Hz, banding tests, panel audits, generator |
 | [`docs/`](.) | Everything you are reading |
-| [`tools/`](../tools/) | Health check, audit collector, EFI backup, release packaging and verification, Linux capture scripts |
+| [`tools/`](../tools/) | Health check, Bluetooth diagnosis, audit collector, EFI backup, release packaging and verification, Linux capture scripts |
 | [`linux-evidence/`](../linux-evidence/) | Linux cross-check evidence used to settle hardware questions |
 | [`reference/`](../reference/) | Historical handovers, the optimisation review, the known-good manifest |
 

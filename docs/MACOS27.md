@@ -3,6 +3,22 @@
 **Short answer: macOS 26 Tahoe is the end of the line for the PT515-51.** Do not plan a macOS 27
 migration for daily use.
 
+## First, confirm what you are running
+
+`sw_vers` is the only authority:
+
+```sh
+sw_vers
+# ProductVersion: 26.7.3
+# BuildVersion:   25G342
+```
+
+A **26.7.x** point update is still Tahoe, not macOS 27. Safari has its own version series (27.x)
+and appears in Software Update next to the OS; seeing "27" there does not mean the operating
+system is 27. If `sw_vers` reports 26.x, every patch in this repository still applies.
+
+---
+
 ---
 
 ## What is established
