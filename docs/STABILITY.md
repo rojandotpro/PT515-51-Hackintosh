@@ -111,6 +111,41 @@ another Mac — the ESP is just a FAT32 partition.
 - `/Library/Application Support/PredatorSense/state.json` (root-only) if you tuned fans/RGB,
 - **this repository** — it is the documentation for all of the above.
 
+### Bootable clone with SuperDuper! (verified 2026-11-20)
+
+A full bootable clone of 26.7.3 (25G342) was made from the internal APFS startup volume to an
+external 274.9 GB APFS container with SuperDuper! 4. It is a valid second bootable system, not just
+a file backup. Sequence that worked:
+
+1. Create the destination with `diskutil addPartition disk2s2 APFS "macOS Clone" 0` (uses the
+   unallocated space after Multimedia; `0` = fit to fill).
+2. In SuperDuper!, select the internal `MacOS` volume as source and `macOS Clone` as destination,
+   and use the **Bootable Mirror** job. It runs in three phases: prepare destination, replicate
+   volumes, make destination bootable.
+3. SuperDuper! rebuilds a full APFS volume group (System, Data, Preboot, Recovery). It skips the
+   EFI partition — copy the OpenCore ESP separately if the clone must boot independently.
+4. Set `ScanPolicy` to `19860739` (`0x12F0D03`) so the OpenCore picker can see the USB disk.
+   With the old `17763587`, boot the clone via the firmware F12 menu instead.
+5. On first boot of the clone, re-apply OCLP root patches and the OCLP-Mod Intel Wi-Fi patch.
+
+**OCLP root patches and cloning:** SuperDuper! uses Apple's `asr`, which cannot reliably replicate a
+system volume whose seal is broken by root patches. The conventional workaround is to revert root
+patches, reboot, clone, then re-apply patches on the clone. In this run the source was already
+reverted (`Sealed: Yes`) before the copy and the clone's System volume came out `Sealed: Broken`
+with a valid update snapshot — so the clone inherited the patched state. Check both volumes with
+`diskutil info <system-slice> | grep -i sealed` and re-apply patches on whichever one is broken
+or missing Wi-Fi.
+
+**Verification performed on the clone:**
+
+- Volume group present with correct roles: System 12.6 GB, Data 195.5 GB, Preboot 10.9 GB,
+  Recovery 1.5 GB; `SystemVersion.plist` reports 26.7.3 / 25G342, matching the source.
+- File counts match for Applications (78 top-level, 80 `.app`), Desktop (59,487), Documents
+  (36,281), Pictures (2,755), Music (137). Dotfiles and `.zshrc` checksums match.
+- Expected point-in-time differences only: the two install ISOs remain in the clone's `Downloads`
+  because they were moved to `/Volumes/Multimedia/OS ISOs` after the snapshot; `.GlobalPreferences.plist`
+  changed on the source after the copy (live preferences keep changing). Neither is corruption.
+
 ---
 
 ## The update playbook

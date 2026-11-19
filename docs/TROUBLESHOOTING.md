@@ -43,6 +43,10 @@ cp -R /Volumes/EFI/EFI/OC ~/Desktop/OC-working-$(date +%Y%m%d)
 - BIOS: **Secure Boot off, CSM off, Fast Boot off**. Press **F12** for the boot menu and choose the
   **UEFI** entry, not the legacy one.
 - Confirm `Drivers/OpenRuntime.efi` and `Drivers/HfsPlus.efi` are present and enabled.
+- If the USB drive still does not appear in the picker, check `Misc → Security → ScanPolicy`. The
+  shipped value `19860739` (`0x12F0D03`) includes `OC_SCAN_ALLOW_DEVICE_USB` (`0x00200000`).
+  Older configs used `17763587` (`0x10F0D03`), which excludes USB — with that value, use the
+  firmware F12 menu instead, or add the USB bit as above.
 
 ## Black internal screen, machine clearly running
 

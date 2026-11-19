@@ -34,7 +34,7 @@ this. If you make a verified change, update this file.
 | `Vault` | `Optional` |
 | `DmgLoading` | `Signed` |
 | Picker | Builtin, timeout 2, `HideAuxiliary = true` |
-| `ScanPolicy` | `17763587` (`0x10F0D03`) |
+| `ScanPolicy` | `19860739` (`0x12F0D03`) — internal SATA/NVMe + APFS/ESP/NTFS **plus USB**; allows the OpenCore picker to see USB drives (clone/installer) |
 
 ## Kexts — enabled, in load order
 

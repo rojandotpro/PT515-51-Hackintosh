@@ -34,7 +34,7 @@ Build and install:
 ## 4. Completed work
 - Left USB-A diagnosis; USB map (UTBMap; HS01-03 type 3, HS04 type 9, HS05/HS06 internal).
 - Display: native EDID with "Triton 500" name; 144/120/90 Hz modes (macOS reads only the 4 base-block DTDs; extra rates via same clock/htotal with longer vblank; 90 Hz DTD `9d8580a07038eb426c30aa0058c11000001a`; config B replaces the 60 Hz slot). 90 Hz verified. Banding believed to be the panel default.
-- EFI backups, folder tidy, ScanPolicy change for boot speed (17763587 / 0x10F0D03; rollback `config.pre-scanpolicy.bak`), health and idle-power checks. EFI recheck was healthy.
+- EFI backups, folder tidy, ScanPolicy change for boot speed (now 19860739 / 0x12F0D03 — adds USB device scanning so the OpenCore picker sees external clones/installers; earlier no-USB value 17763587 / 0x10F0D03 is the rollback, backup `config.pre-scanpolicy.bak`), health and idle-power checks. EFI recheck was healthy. A bootable SuperDuper clone of 26.7.3 was made to the external 274.9 GB APFS volume on 2026-11-20 and verified (see `docs/STABILITY.md`).
 - **Keyboard backlight 0-100% slider (confirmed working):** hardware 0 = off, 25-100 visible. `kbPctToHw(p) = p==0 ? 0 : 24 + round(0.76*p)`; `kbHwToPct(hw) = hw<25 ? 0 : clamp(round((hw-24)/0.76),1,100)`. Daemon has a `kbpct <0-100>` command and `kbPercent` in status; the app slider is 0...100 with caption "0% turns the backlight off."
 - **"Off" not holding, fixed:** the slider floor of 25 plus `kbIdleTick` re-asserting brightness every 15 s caused it. The re-assert is now skipped when brightness is 0.
 - Cleanup: deleted `config-bak.plist`, `config1.plist`, `config.A-working.plist`, and junk `._Info.plist` in the kext.

@@ -84,7 +84,7 @@ limit peak-power bursts; replace it if you need sustained performance on battery
 
 | Area | Status |
 |---|---|
-| Boot / install | OpenCore, built-in picker, fast boot (`ScanPolicy` set) |
+| Boot / install | OpenCore, built-in picker, fast boot (`ScanPolicy` allows internal drives and USB) |
 | Graphics | UHD 630, Metal 3, 1920×1080 at 144 / 120 / 90 Hz |
 | Audio | Internal speakers, internal mic, headphone jack — custom ALC289 layout 23 with EQ, +6 dB and limiter |
 | Wi-Fi | AirportItlwm 2.3.0 + IOSkywalkFamily/IO80211FamilyLegacy |
