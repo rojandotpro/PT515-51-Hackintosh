@@ -3,6 +3,13 @@
 Panel: **BOE NV156FHM-N4K**, EDID vendor/product `09e5`/`082a`, 15.6" 1920×1080 IPS, 144 Hz,
 141 ppi, 8 bits per component, RGB 4:4:4, gamma 2.2, sRGB-like primaries.
 
+The internal eDP link runs at **HBR2 (5.40 Gbps/lane), 4 lanes**, with zero lane errors reported by
+`system_profiler SPDisplaysDataType` (`spdisplays_displayport_current_bandwidth`,
+`_lanes`, `_errors_lane0..3`). That is ~17.3 Gbps of raw payload bandwidth — well above what
+1920×1080 at 144 Hz needs — so link bandwidth is **not** the limiting factor for the 120 Hz and
+90 Hz EDID modes in this repo. The EDID advertises 8 bits per primary channel; physical panel
+bit depth (8-bit vs 6-bit+FRC) is still not confirmed by measurement.
+
 Measured by Notebookcheck on the same panel model: 93 % sRGB, 288 cd/m², 1309:1, ΔE 3.22 out of
 the box. **No HDR** — the EDID has zero extension blocks, so there is no CTA-861 HDR metadata
 block. DisplayHDR is not supported and cannot be enabled. What Safari does with HDR YouTube is

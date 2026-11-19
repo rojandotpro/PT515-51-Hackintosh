@@ -260,6 +260,23 @@ entries removed. **No trackpad or wake SSDT is used on this machine** — see §
 > Do **not** also set the `-igfxblr` boot-arg — it is the global form of
 > `enable-backlight-registers-fix` and was removed as redundant.
 
+### 2.6.1 BIOS graphics options (from `BIOS_113/setup.txt` IFR dump)
+
+The BIOS does expose a real 2048 MB aperture. Options and factory defaults, decoded from the
+setup IFR (VarStore `SaSetup`, GUID `72C5E28C-7783-43A1-8767-FAD73FCCAFA4`):
+
+| Option | Offset | Selectable values | Factory default |
+|---|---|---|---|
+| `GTT Size` | `0x43` | 2 / 4 / 8 MB | **8 MB** |
+| `Aperture Size` | `0x44` | 128 / 256 / 512 / 1024 / **2048 MB** | **256 MB** |
+| `DVMT Pre-Allocated` | `0x107` | 0, 32, 64, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60 MB | **32 MB** |
+| `DVMT Total Gfx Mem` | `0x108` | 128 / 256 / MAX MB | **256 MB** |
+
+The 64 MB reservation measured in Linux (`0x75800000-0x797fffff`) is above the 32 MB factory
+default for `DVMT Pre-Allocated`, so the installed BIOS is not at that default. The IFR dump gives
+defaults and selectable values only — it does not contain the live NVRAM value. Do not change any
+of these BIOS settings to "fix" VRAM: the macOS patch in §2.6 works without touching firmware.
+
 ---
 
 ## 3. Reverse-Engineered ACPI-WMI Interface

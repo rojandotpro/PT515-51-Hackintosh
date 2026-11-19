@@ -18,3 +18,7 @@ audio/build.log
 *.bak
 *.plist.bak
 EOF*
+
+# Python bytecode (tooling)
+__pycache__/
+*.pyc
